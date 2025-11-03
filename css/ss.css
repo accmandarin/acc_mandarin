@@ -101,7 +101,7 @@
 
     /* --- Section 2 (卡片區) --- */
     .section {
-      background: url('https://accmandarin.github.io/acc_mandarin/imgs/') no-repeat center center/cover;
+      background: url('https://accmandarin.github.io/acc_mandarin/imgs/ss_bl.jpg') no-repeat center center/cover;
 	  /*background: url('https://picsum.photos/1920/1080?blur=3') no-repeat center center/cover;*/
       padding: 100px 20px; display: flex; justify-content: center;
       gap: 30px; flex-wrap: wrap;
@@ -150,4 +150,5 @@
 	line-height: 1.3;
 	color: white;
 }
+
   </style>
