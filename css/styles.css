@@ -56,6 +56,7 @@
 
     /* Dropdown */
     .menu li ul {
+	  list-style-type: none;
       position: absolute;
       top: 100%; left: 0;
       background: rgba(0, 6, 79, 0.9);
@@ -433,6 +434,7 @@ footer p{
     }
 
   }
+
 
 
 
