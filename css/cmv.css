@@ -1,331 +1,182 @@
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body {
-  min-height: 100vh; display: flex; flex-direction: column;
-}
+<style>
+:root { --header-height: 0px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-body > footer {  margin-top: auto;}
-body {
+html, body {
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-image: url("../imgs/acc_building.jpg");
-  /*background: linear-gradient(to bottom, #4B0082, #9370DC);*/
-  margin: 0;
-  /* 刪掉 height: 100vh; */
+  display: flex;
+  flex-direction: column;
 }
-    /* --- 導覽列 --- */
-/* Header 固定 */
+
+body > footer { margin-top: auto; }
+
+/* --- Header --- */
 header {
   position: fixed;
   top: 0; left: 0;
   width: 100%;
+  background: rgba(20,6,79,0.8);
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  background: rgba(20,6,79,0.8);
   z-index: 1000;
   backdrop-filter: blur(20px);
 }
-    header .logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
-	    /* Logo */
+
+  /* Header Logo */
     .logo {
       display: flex; align-items: center;
       color: #fff; font-weight: bold;
       text-decoration: none; font-size: 1.2rem;
     }
     .logo img { height: 80px; margin-right: 0.5rem; }
-/*	nav {
-      width: 100%;
-	  background: rgba(20,6,79,0.7);
-      backdrop-filter: blur(6px);
-      z-index: 1000;
-    } */
-    nav ul { list-style: none; display: flex; }
-    nav ul li { position: relative; }
-    nav ul li a {
-      display: block; padding: 10px 20px; color: #fff; text-decoration: none;
-    }
-    nav ul li a:hover { background: rgba(25,55,155,0); color:#ffd745; }
 
-    /* 下拉選單 (桌機版 hover) */
-    nav ul ul {
-      position: absolute; top: 100%; left: 0;
-      background: rgba(0,6,79,0.9); 
-      display: none; flex-direction: column; min-width: 180px;
-	  border-radius: 6px;
-	  z-index: 99;
-    }
-    nav ul li:hover > ul { display: flex; }
-    nav ul ul li a { padding: 10px; }
-
-    /* 漢堡選單按鈕 */
-    .menu-toggle {
-      display: none; flex-direction: column; cursor: pointer;
-    }
-    .menu-toggle div {
-      width: 25px; height: 3px; background: #fff; margin: 4px 0;
-      transition: all 0.3s ease;
-    }
-
-   /* --- Pattern sections --- */
-.panel {
-  padding: 5rem 1rem 1rem 2rem;
-  text-align: center;
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  position: relative;
+/* --- Nav --- */
+nav {
+  transition: max-height 0.3s ease-out;
 }
-	.panel .content {
-		position: relative;
-		left: 60px;
-		width: 85%;
-		z-index: 2;
-		color: #fff;
-		text-align: center ;
-		padding: 2rem;
-		margin: 10px 20px 10px 20px;
-	/*	background: rgba(0, 0, 0, 0.1);*/
-		border-radius: 12px;
-	}
-	
-	.panel table{
-		width:70%;
-		padding: 10px;
-		border: 4px solid;
-		border-radius: 10px;
-		margin: 10px 30px 20px 10px;
-		text-align: center;
-		line-height: 50px;
-	}
-	.panel td{
-		vertical-align: top;
-		height:60px;
-	}
-	
-.pattern-1 {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  position: relative;
-  z-index: 0;
-  color: #fff;
+nav ul { list-style: none; display: flex; }
+nav ul li { position: relative; }
+nav ul li a { display: block; padding: 10px 20px; color: #fff; text-decoration: none; }
+nav ul li a:hover { color: #ffd745; }
+
+/* 下拉選單 (桌機版 hover) */
+nav ul ul {
+  position: absolute; top: 100%; left: 0;
+  background: rgba(0,6,79,0.9);
+  display: none; flex-direction: column; min-width: 150px;
+  border-radius: 6px; z-index: 99;
 }
-    .pattern-2 {
-      background: repeating-linear-gradient(
-        -45deg, #fafafa, #fafafa 25px, #ddd 25px, #ddd 50px
-      );
-	}
-	
-	h1 { margin-bottom :30px; border-bottom: solid 2px; border-top: solid 2px;}
-	
-	h3{	padding: 20px 25px 15px 10px;	}
-			
-	.p2{ padding:5px 20px 5px 30px; line-height:40px; }
-	
-	p{ text-align:justify; font-size:larger;margin-right: 20px;}
+nav ul li:hover > ul { display: flex; }
 
- /* --- Section 1 (影片背景) --- */
-    .hero {
-      position: relative; height: 100vh; width: 100%; overflow: hidden;
-      display: flex; justify-content: center; align-items: center;
-    }
-    .hero video {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      object-fit: cover; z-index: -1;
-    }
-	
-    .hero .content {
-      color: #fff; text-align: center; background: rgba(0,0,0,0.4);
-      padding: 40px; border-radius: 10px; width:75%; margin-top: -2rem;
-	  left:20px;  /*  有特別聚會時增加  */
-	  position: absolute;   /* 有特別聚會時改成 absolute ; 平常是 relative */
-    }
+/* 漢堡選單 */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle div {
+  width: 25px; height: 3px; background: #fff; margin: 4px 0;
+  transition: all 0.3s ease;
+}
 
-    /* 手機 / 平板樣式 */
-    @media (max-width: 768px) {
-      nav {
-        position: absolute; top: 60px; right: 0;
-        width: 220px; background: rgba(0,0,0,0.95);
-        max-height: 0; overflow: hidden;
-        transition: max-height 0.3s ease-out;
-      }
-      nav.active { max-height: 500px; } /* 展開效果 */
-
-      nav ul {
-        flex-direction: column; width: 100%;
-      }
-      nav ul li { border-bottom: 1px solid rgba(255,255,255,0.1); }
-      nav ul li a { padding: 12px 16px; }
-
-      /* 手機版下拉選單：預設隱藏 */
-      nav ul ul {
-        position: static;
-        display: none;
-        background: rgba(0,0,0,0.8);
-      }
-      nav ul li.active > ul {
-        display: flex;
-      }
-
-      .menu-toggle { display: flex; }
-	  
-	  .hero .content{font-size:90%; width:98%; text-align:justify; /*margin-top:15rem; */ top:15%; padding:5px; color:white; border-radius: 10px; left: auto;  }
-	  
-	  h1 { font-size:1.5rem; text-align: center; margin-top: 30px; margin-bottom :30px; border-bottom: solid 2px; border-top: solid 2px;}
-	  
-	  .p2{ padding:5px 20px 5px 30px; line-height:40px; line-align: center; font-size:larger;}
-	 
-	 .panel .content {
-		position: relative;
-		left: 0px;
-		width: 95%;
-		z-index: 2;
-		color: #fff;
-		text-align: center ;
-		padding: 2rem;
-		margin: 10px;
-	/*	background: rgba(0, 0, 0, 0.4);*/
-		border-radius: 12px;
-	}
-	 
-	 .panel table{
-		width:100%; padding: 5px; border: 4px solid; border-radius: 10px;
-		margin: 10px; text-align: center; line-height: 20px;
-	}
-	.panel td{
-		vertical-align: top; height:60px;
-	}
-	  
-	  
-    } /*   結束手機板  */
-
-	.panel table{
-		width:100%; padding: 5px; border: 4px solid; border-radius: 10px;
-		margin: 10px; text-align: center; line-height: 20px;
-	}
-	.panel td{
-		vertical-align: top; height:60px;
-	}
-
-    /* --- Section 2 (卡片區) --- */
-    .section {
-      background: url('./imgs/acc_building.jpg') no-repeat center center/cover;
-      padding: 100px 20px; display: flex; justify-content: left;/* 平常是center, 有特會時改left  */
-      gap: 30px; flex-wrap: wrap;
-    }
-    .card {
-	  text-align: center;
-      background: rgb(0,0,0,0.5); width: 98%; padding: 10px;
-      border-radius: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-      opacity: 0; transform: translateY(50px); position: relative;
-	  text-decoration: none;
-    }
-    .card.show {
-      animation: slideUp 1s forwards;
-	  background: rgb(0,0,0,0.5);
-	  top: 25px;
-    }
-	.card p {text-align:justify; text-decoration: none; color:white; }
-	.card h3 {font-size:20px; text-align:justify; text-decoration: none; color:white; margin: 10px 0 5px; padding: 10px; }
-	.card .panel { padding: 0.5rem 0rem; text-align: center; background: rgba(0, 0, 0, 0.2); }
-    .card img { max-width: 100%; border-radius: 10px; }
-	.card h1 { color: #fff; }
-	ol { color:white; bold;}
-	.card li { text-align:justify; margin-left: 2rem; margin-bottom:1rem; }	
-		
-	.clink {color: white; background-color: transparent; text-decoration: none; }
-	.clink_w {color: white; background-color: transparent; text-decoration: none; }
-	
-	
-/*	a:visited {color: black; background-color: transparent; text-decoration: none; }
-*/	
-	
-    @keyframes slideUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-	
-footer {
-  background: linear-gradient(to top, rgba(26,6,79,0.5), rgba(13,7,41,1));
-  color: white;
-  padding: 2em;
-  text-align: center;
+/* --- Hero --- */
+.hero {
+  min-height: calc(100svh - var(--header-height));
   width: 100%;
-  margin-top: auto; /* ← 讓 footer 永遠黏底 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg') no-repeat center center/cover;
   position: relative;
 }
-	
-	footer p{
-	margin-top: 0.975em; font-size: 0.9em; color: white; text-align:center;
+.hero .content {
+  background: rgba(0,0,0,0.5); color: white;
+  padding: 2rem; border-radius: 10px;
+  text-align: center; width: 90%;
+  margin-top: 5rem;
 }
-/*  移動式方框   */
-.draggable-box {
-  width: 150px;
-  height: auto;
-  background: rgba(0, 123, 255, 0.8);
-  color: white;
+
+h1 {font-size:28px; margin-bottom:10px;}
+h3 {font-size:24px; text-align:justify; margin-top:10px;}
+ p {font-size:18px; text-align:justify;}
+
+/* --- Card Section --- */
+.card-section {
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 100px;
-  left: 100px;
-  border-radius: 10px;
-  cursor: move;
-  user-select: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: box-shadow 0.2s;
+  align-items: flex-start; /* 齊頭 */
+  gap: 20px;
+  flex-wrap: wrap;
+/*  padding: 2rem;*/
+  background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg') no-repeat center center/cover;
 }
 
-.draggable-box:active {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+.card {
+  background: rgba(0,0,0,0.5); color: white; padding: 1rem;
+  border-radius: 15px; 
+ /* width: 300px;  <-- REMOVED THIS LINE */
+  max-width: 90%; /* Allows it to grow, but not too wide */
+  flex-basis: auto; /* Crucial for content-fitting in a flex container */
+  min-width: 280px; /* Optional: prevents it from becoming too small */
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  opacity: 0; /* Cards start hidden */
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}
+.card.show { opacity:1; transform: translateY(0); width:99%; }
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  position: relative;
 }
 
-  /* 浮動方框 */
-  .floating-box {
-    position: fixed;       /* 固定在畫面上 */
-    top:115px;
-	/*bottom: 20px;          /* 距離底部 20px */
-    right: 10px;           /* 距離右邊 20px */
-    background: rgba(60,60,60,0.7);  /* 半透明黑底 */
-    color: #fff;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    width: 20%;
-	height: auto;
-    z-index: 88;         /* 確保在最上層 */
-    transition: opacity 0.5s ease;
-	animation: slideUp 3s forwards;
+/* Floating Box */
+.floating-box {
+  position: fixed;
+  top: 115px;
+  right: 10px;
+  background: rgba(60,60,60,0.7);
+  color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  width: 200px;
+  z-index: 88;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.floating-box.show { opacity: 1; }
+.floating-box.hide { opacity: 0; }
 
+/* 手機板 */
+@media (max-width: 768px) {
+ 
+	h1 {font-size:24px; margin-bottom:10px; text-align:center; }
+	h3 {font-size:20px; text-align:justify; margin-top:10px;}
+	p {font-size:16px; text-align:justify;}
+	
+  .menu-toggle { display: flex; }
+  nav {
+    position: absolute; top: 60px; right: 0;
+    width: 220px;
+    max-height: 0; overflow: hidden;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+  }
+  nav.active { max-height: fit-content; } /* Corrected from 500px */
+
+  nav ul { flex-direction: column; width: 100%; }
+  nav ul li { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  nav ul li a { padding: 12px 16px; }
+
+  /* 手機版下拉選單：預設隱藏 */
+  nav ul ul { position: static; display: none; background: rgba(0,0,0,0.8); }
+  
+  /* 手機版下拉選單：點擊時展開 */
+  nav ul li.active > ul {
+    display: flex; /* Or display: block; */
+    max-height: fit-content;
+    opacity: 1;
+    padding-left: 15px; /* Indent sub-items */
   }
 
-  /* 可選：滑鼠移入特效 */
-  .floating-box:hover {
-    background: rgba(70,70,180,1);
+  .hero .content { width: 98%; font-size: 0.9rem; margin-top:5rem;}
+  .card-section { flex-direction: column; align-items: center; }
+  .floating-box { width: 160px; top: 100px; }
+  
+  /* Ensure cards fill more width on small screens */
+  .card {
+    max-width: 98%; /* Cards should take almost full width on mobile */
+    min-width: unset; /* Remove min-width restriction on mobile */
   }
-
-  /* 手機板調整 */
-  @media (max-width: 768px) {
-    
-		.floating-box {
-			display: block;
-			position: fixed;       /* 固定在畫面上 */
-			top:115px;
-			/*bottom: 20px;          /* 距離底部 20px */
-			right: 5px;           /* 距離右邊 20px */
-			background: rgba(60,60,60,0.7);  /* 半透明黑底 */
-			color: #fff;
-			padding: 10px;
-			border-radius: 15px;
-			box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-			width: 160px;
-			height: 450px;
-			z-index: 88;         /* 確保在最上層 */
-			transition: opacity 0.5s ease;
-			animation: slideUp 3s forwards;
-	   }
-  }
-
+}
+</style>
