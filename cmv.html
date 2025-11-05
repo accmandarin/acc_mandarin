@@ -3,27 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>奧斯汀華人教會華語堂</title>
+  <title>奧斯汀華人教會華語堂價值與核心</title>
   <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
   <link rel="stylesheet" href="css/cmv.css" />
 
-<!-- CDN 載入 繁簡自動切換 opencc-js（正式版） -->
-  <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.6/dist/browser.min.js"></script>
-
 </head>
 <body>
-  <!-- 導覽列 -->
   <header>
     <div class="logo"><a href="index.html" class="logo"><img src="imgs/new_acclogo.png" alt="Logo" /></a></div>
-    <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
       <div></div><div></div><div></div>
     </div>
 	
-    <nav>
+    <nav id="navMenu"> <!-- Added id="navMenu" -->
       <ul>
         <li><a href="#">簡介 ▼</a>
 			<ul>
-
+				<li><a target="_blank" href="https://acc.churchcenter.com/giving" class="button primary">網路奉獻</a></li>
 				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/constitution.html">信仰與規章</a></li>
 				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/church_history.html">教會歷史</a></li>
 				<li><a href="cmv.html">價值與異象</a></li>
@@ -33,6 +29,7 @@
         <li><a href="https://docs.google.com/document/d/e/2PACX-1vQFofynJeO5q1srUn2seLbCLktSl-vCQbwJAxYUqrYu5BRMEEQZDWuMFPWqSRX-H5rI91EYZu3_RRez/pub">團契</a></li>
 		<!--<li><a href="fellowships.html">團契</a></li>-->
 		
+		<!--<li><a href="pray.html">禱告</a></li>-->
 		<li><a href="#">禱告與靈修 ▼</a>							
 			<ul>
 				<li><a href="pray.html">禱告</a></li>
@@ -40,13 +37,19 @@
 				<li><a href="https://austinchinesechurch.github.io/acc.github.io/html/1_spiritual_formation.html">讀經計畫與靈修材料</a></li>
 			</ul>
 		</li>
-
+<!--		<li><a href="#">主日學 ▼</a>
+			<ul>
+				<li><a target="_blank" href="https://austinchinesechurch.org/docs/SSchool.pdf">本季主日學時間地點</a></li>
+				<li><a target="_blank" href="https://austinchinesechurch.org/docs/currentquarter.pdf">本季主日學內容</a></li>
+				<li><a target="_blank" href="https://lssaustin.org/Man/index.php/m-sundayschool/classhistory">主日學課程歷史</a></li>
+			</ul>
+-->
 		</li>
 		<li><a href="#">主日學與事工 ▼</a>
 			<ul>
 				<li><a target="_blank" href="https://austinchinesechurch.org/docs/SSchool.pdf">本季主日學時間地點</a></li>
 				<li><a target="_blank" href="https://austinchinesechurch.org/docs/currentquarter.pdf">本季主日學內容</a></li>
-				<li><a target="_blank" href="ss_history.html">主日學課程歷史</a></li>
+				<li><a target="_blank" href="https://lssaustin.org/Man/index.php/m-sundayschool/classhistory">主日學課程歷史</a></li>
 				<li><a target="_blank" href="https://www.acclighthouse.org/">青少年事工 YOUTH</a></li>
 				<li><a target="_blank" href="https://www.accchildren.org/">兒童事工 CHILDREN</a></li>
 				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/3_chinese_school.html">中文學校 CHINESE SCHOOL</a></li>
@@ -54,7 +57,6 @@
 		</li>
 		<li><a href="#">聯繫我們 ▼</a>
 			<ul>
-				<li><a target="_blank" href="https://acc.churchcenter.com/giving" class="button primary">網路奉獻</a></li>			
 				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/direction.html">地圖指引</a></li>
 				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/first_visit.html">初次來訪</a></li>
 				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/recruit.html">教牧及職員招聘</a></li>
@@ -62,79 +64,89 @@
 		</li>
 		<li><a href="#">資源 ▼</a>
 			<ul>
+				<li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1Pn-9NTwUQutUYn0rwWzXPbtEHNVENrTFkWkqzsPO_cY/">主日證道</a></li>
 				<li><a target="_blank" href="https://www.youtube.com/@AustinChineseChurch/playlists">主日證道影片</a></li>
 				<li><a target="_blank" href="https://austinchinesechurch.org/WeeklyDocs/SundayBulletins.htm">教會週報</a></li>
 				<li><a target="_blank" href="yearreport.html">年度事工報告</a></li>
 				<li><a target="_blank" href="https://sites.google.com/austinchinesechurch.org/acc-education-building">建堂進度</a></li>
+				<!--	<li><a target="_blank" href="https://lssaustin.org/Man/administrator/">網站管理</a></li> -->
 			</ul>
 		</li>
+<!--		<li><a target="_blank" href="https://acc.churchcenter.com/giving" class="button primary">網路奉獻</a></li> -->
 		<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/" class="button primary">教會主頁</a></li>
       </ul>
     </nav>
   </header>
 
-
-<section class="panel pattern-1">
-	
-    <div class="card">
+<section class="hero">
+  <div class="content">
 		<h1>奧斯汀華人教會核心價值<br>ACC Core Values</h1>
 			<ol>
-				<li> <h3>Bible 聖經</h3>
+				<li>
+					<h3>Bible 聖經</h3>
 					<p>We believe that God's Word is the catalyst for spiritual transformation and growth. 
 					The Bible is the authoritative guide for what we believe and how we should live. (2 Timothy 3:16)<br>
 					我們相信神的話語促使靈命改造和成長。聖經是我們信仰和生活的權威指南。 （提摩太後書3:16）</p>
 				</li>
-				<li> <h3>Worship 敬拜</h3>
+				<li>
+					<h3>Worship 敬拜</h3>
 					<p>We believe that our God is supreme and sovereign. He is the focus of our worship and He is worthy of our worship, 
 					both individually and corporately. (Rom 12:1-2)<br>
 					我們相信我們的神是至高至尊丶 並擁有絕對主權的神。祂是我們個人和集體崇拜的焦點，是配得我們敬拜的。 （羅馬書12:1-2）</p>
 				</li>
-				<li > <h3>Prayer 祈禱</h3>
+				<li>
+					<h3>Prayer 祈禱</h3>
 					<p>We believe that prayer is the foundation of all our ministries and therefore, His house must be a house of prayer.(Isaiah 56:7)<br>
 					我們相信祈禱是我們所有事工的基礎，因此神的家必須是一個禱告的殿。 （以賽亞書56:7）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h3>Outreach 佈道</h3>
+				<li>
+					<h3>Outreach 佈道</h3>
 					<p>We value a lifestyle of sharing the love of God locally and globally by spreading His Good News through evangelism,
 					missions, and community service. We understand that every ACC member is called to be an ambassador for Christ.
 					(Matthew 28:19-20, 2 Corinthians 5:20)<br>
 					我們重視在生活中與人分享神的愛，並通過佈道、宣教和社區服務在本地和全球傳揚福音。
 					我們領悟每一個奧斯汀華人教會的成員都被召為基督的使者。 （馬太福音 28:19-20，哥林多後書 5:20）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h3>Fellowship 團契</h3>
+				<li>
+					<h3>Fellowship 團契</h3>
 					<p>We believe in authentic fellowship groups that are relational and sacrificial in building up the body of Christ. (Acts 2:42-47)<br>
 					我們相信真正的團契表現在相互關心，以犧牲的精神來建立基督的身體。 （使徒行傳 2:42-47）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h3>Unity 合一</h3>
+				<li>
+					<h3>Unity 合一</h3>
 					<p>We believe that it is essential and effective for our leaders to seek, discern, and obey the Lord’s will as a team.  
 					We value honest communication and mutual respect so that God will be glorified and our Church will be purposeful. (Ephesians 4:11-13,15)<br>
 					我們相信領袖們必須有效地融合為一個團隊， 去共同尋求、辨識並服從主的旨意。我們重視以坦誠的溝通和相互的尊重來榮耀神，使教會更有清晰的方向。 （以弗所書 4:11-13,15）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h3>Discipleship 門徒造就</h3>
+				<li> 
+					<h3>Discipleship 門徒造就</h3>
 					<p>We believe that every Christian must continually grow and be transformed as a disciple of Christ through teaching,
 					preaching, application of God’s Word, personal mentoring, and faithful serving. (Ephesians 4:1-3, 15-16)<br>
 					我們相信每一個基督徒必須不斷成長，通過教導、訓誨、活用神的話語、個人輔導和忠心的事奉轉化成基督的門徒。 （以弗所書 4:1-3，15-16）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h3>Family 家庭</h3>
+				<li>
+					<h3>Family 家庭</h3>
 					<p>As a multi-ethnic Chinese church, we believe in God-centered family relationships and are united as one church
 					that encourages a diversity of cultures and life stages.(1 Corinthians 12:12-13; 2 Timothy 1:5）<br>
 					作為一個包涵多樣文化背景的華人教會，我們相信教會是以神為中心的大家庭，在合一中鼓勵多樣性的文化和容納不同年齡的成員。（哥林多前書 12:12-13; 提摩太後書 1:5）</p>
 				</li>
-	</div>
+  </div>
 </section>
 
-<section class="panel pattern-1">
+<section class="panel card-section">
 	<div class="card">
 		<h1>奧斯汀華人教會的使命<br>ACC Mission Statement</h1><br>
-		<h3>ACC’s mission is to make disciples of Jesus Christ by sharing His good news with all people, especially with those of Chinese descent, 
+		<p>ACC’s mission is to make disciples of Jesus Christ by sharing His good news with all people, especially with those of Chinese descent, 
 		and helping them grow as followers of Christ, so that together we will bear witness of His glory in Austin, in the surrounding areas,
 		and to the ends of the earth.<br>
-		奧斯汀華人教會的使命是向萬民,傳揚耶穌基督的福音，從奧斯汀及周邊地區，直到全世界，特別是有華人背景的對象，並幫助他們成長為跟隨基督的門徒，一同在世上為神的榮耀作見証。</h3>
+		奧斯汀華人教會的使命是向萬民,傳揚耶穌基督的福音，從奧斯汀及周邊地區，直到全世界，特別是有華人背景的對象，並幫助他們成長為跟隨基督的門徒，一同在世上為神的榮耀作見証。</p>
 	</div>
 </section>
-<section class="panel pattern-1">
+ 
+<section class="panel card-section"> 
 	<div class="card">
 		<h1>奧斯汀華人教會的異象<br>ACC Vision Statement</h1><br>
-		<h3>We envision being a church that uses its unique ethnic backgrounds to passionately, purposefully, 
+		<p>We envision being a church that uses its unique ethnic backgrounds to passionately, purposefully, 
 		and compassionately reach out to everyone that God has placed in our lives with the Gospel of Jesus Christ, 
 		both here in Austin, and to the world.<br>
 		我們展望我們的教會用獨特的種族背景，熱情地、刻意地、有愛心地向所有神放在我們生
@@ -160,87 +172,67 @@
 		我們展望教會積極地培訓信徒成為僕人領袖，刻意地傳下信仰和經驗給年輕接棒人，並培養未來的牧師、宣教士和帶職事奉的傳道人。<br><br>
 		We envision a house of worship where people actively pursue God through Spiritfilled praises, powerful prayer, 
 		and life-changing preaching/teaching in order to cultivate faithful followers of Jesus Christ.<br>
-		我們展望教會是個敬拜的家，人人通過聖靈充滿的讚美、有力的祈禱和改變生命的講道和訓誨，積極地追求神，目的在培養耶穌基督忠實的追隨者。</h3>
+		我們展望教會是個敬拜的家，人人通過聖靈充滿的讚美、有力的祈禱和改變生命的講道和訓誨，積極地追求神，目的在培養耶穌基督忠實的追隨者。</p>
 	</div>
+</section>
+<!--
+<div class="floating-box" id="floatingBox">
+  浮動公告
+</div>
+-->
+<footer>
+  教會 Footer 內容
+</footer>
 
-  </section>
-
-   
-   <footer>
-	<h4>奧斯汀華人教會<br>Austin Chinese Church</h4>
-	<p>11118 Dessau Road, Austin, TX 78754<br>Phone: 512-339-8675<br>Fax: 512-339-9556<br>
-	<a style="color: white; background-color: transparent; text-decoration: underline;" href="mailto:contact@austinchinesechurch.org">contact@austinchinesechurch.org</a></p>
-	<p class="copyright">© Austin Chinese Church. 2023. All rights reserved.</p>
-  </footer> 
-  
-  <script>
-    function toggleMenu() {
-      document.querySelector("nav").classList.toggle("active");
+<script>
+  // 設定 header 高度
+  function updateHeaderHeight() {
+    const header = document.querySelector('header'); // Use querySelector for header
+    if (header) {
+      document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
     }
+  }
+  window.addEventListener('load', updateHeaderHeight);
+  window.addEventListener('resize', updateHeaderHeight);
 
-    // Intersection Observer 逐一動畫
-    const cards = document.querySelectorAll(".card");
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          // 依序延遲
-          setTimeout(() => {
-            entry.target.classList.add("show");
-          }, index * 300);
-          obs.unobserve(entry.target); // 只執行一次
-        }
-      });
-    }, { threshold: 0.3 });
+  // 漢堡選單切換
+  function toggleMenu() { // Define the function for onclick
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) {
+      navMenu.classList.toggle('active');
+    }
+  }
 
-    cards.forEach(card => observer.observe(card));
-  </script>
-
-  
-  <script>
-    (async function() {
-      const btnTW = document.getElementById('btn-tw');
-      const btnCN = document.getElementById('btn-cn');
-      const STORAGE_KEY = 'preferred-chinese-variant';
-
-      // 1️⃣ 載入 OpenCC 轉換器
-      const converterTW2CN = await OpenCC.Converter({ from: 'twp', to: 'cn' }); // 繁 → 簡
-      const converterCN2TW = await OpenCC.Converter({ from: 'cn', to: 'twp' }); // 簡 → 繁
-
-      // 2️⃣ 定義轉換函式（會遞迴轉換所有文字節點）
-      function traverseAndConvert(node, converter) {
-        if (node.nodeType === Node.TEXT_NODE) {
-          node.textContent = converter(node.textContent);
-        } else if (node.nodeType === Node.ELEMENT_NODE) {
-          node.childNodes.forEach(child => traverseAndConvert(child, converter));
+  // 下拉選單在手機模式下的開合邏輯
+  document.querySelectorAll('nav ul li a').forEach(item => {
+    item.addEventListener('click', function(event) {
+      if (window.innerWidth <= 768) { // Only apply on mobile
+        const parentLi = this.parentElement;
+        if (parentLi.querySelector('ul')) { // If it has a submenu
+          event.preventDefault(); // Prevent default link action
+          parentLi.classList.toggle('active'); // Toggle 'active' for submenu display
         }
       }
+    });
+  });
 
-      async function applyVariant(variant) {
-        if (variant === 'cn') {
-          traverseAndConvert(document.body, converterTW2CN);
-          btnCN.classList.add('active');
-          btnTW.classList.remove('active');
-        } else {
-          traverseAndConvert(document.body, converterCN2TW);
-          btnTW.classList.add('active');
-          btnCN.classList.remove('active');
-        }
-        localStorage.setItem(STORAGE_KEY, variant);
-      }
+  // 浮動公告漸入漸出
+  const floatingBox = document.getElementById('floatingBox'); // Corrected variable name
+  if (floatingBox) { // Check if the element exists
+    setTimeout(() => { floatingBox.classList.add('show'); }, 500);
+    setTimeout(() => { floatingBox.classList.remove('show'); }, 8000); // Remove 'show' to hide it
+  }
 
-      // 3️⃣ 綁定事件
-      btnTW.addEventListener('click', () => applyVariant('tw'));
-      btnCN.addEventListener('click', () => applyVariant('cn'));
+  // 卡片漸入效果 (NEW)
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card, index) => {
+    // Stagger the animation slightly for a nicer effect
+    setTimeout(() => {
+      card.classList.add('show');
+    }, 100 * (index + 1)); // 100ms delay per card
+  });
 
-      // 4️⃣ 載入上次設定
-      const saved = localStorage.getItem(STORAGE_KEY);
-      applyVariant(saved === 'cn' ? 'cn' : 'tw');
-    })();
-  </script>
+</script>
+
 </body>
 </html>
-
-
-
-
-
