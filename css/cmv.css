@@ -111,13 +111,14 @@ h3 {font-size:24px; text-align:justify; margin-top:10px;}
 .card.show { opacity:1; transform: translateY(0); width:99%; }
 
 /* Footer */
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-  position: relative;
+	footer{
+		background: -webkit-linear-gradient(top, rgba(26,6,79,0.5), rgba(13,7,41,1));
+		color: white !important; height: 80px; padding: 2em; text-align: center;
+		align-items: center; justify-content: center;
+	}
+	
+	footer p{
+	margin-top: 0.975em; font-size: 0.9em; color: white; text-align:center;
 }
 
 /* Floating Box */
@@ -181,3 +182,4 @@ footer {
 }
 
 </style>
+
