@@ -1,299 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-	<title>奧斯汀華人教會華語堂價值與異象</title>
-<!--	<link rel="stylesheet" href="../css/styles.css" />-->
-	<style>
-		* { box-sizing: border-box; margin: 0; padding: 0; }
-		body { font-family: sans-serif; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>奧斯汀華人教會華語堂</title>
+  <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+  <link rel="stylesheet" href="../css/cmv.css" />
 
-		/* --- Navbar --- */
-		nav {
-		  position: fixed; top: 0; left: 0; width: 100%; padding: 0.5rem 1rem; 
-		  justify-content: space-between; background: rgba(20,6,79,0.8);
-		  backdrop-filter: blur(20px); z-index: 1000; text-decoration: none;
-		}
-		.nav-container {
-		  max-width: 100%; margin: 0 auto; display: flex;
-		  align-items: center; justify-content: space-between;
-		  padding: 0.5rem 1rem;
-		}
+<!-- CDN 載入 繁簡自動切換 opencc-js（正式版） -->
+  <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.6/dist/browser.min.js"></script>
 
-		/* Logo */
-		.logo {display: flex; align-items: center; color: #fff;
-		  font-weight: bold; text-decoration: none; font-size: 1.2rem;
-		}
-		.logo img { height: 80px;  margin-right: 0.5rem; }
-
-		/* Menu (desktop) */
-		.menu { list-style: none; display: flex; gap: 1rem; text-decoration: none; }
-		.menu > li { position: relative;}
-		.menu a {
-		  color: #fff; text-decoration: none; padding: 0.5rem 0.75rem; display: block;}
-		.menu a:hover {
-		  background: rgba(25,55,155,0);
-		  color:#ffd745;
-		  border-radius: 6px;
-		}
-
-		/* Dropdown */
-		.menu li ul { list-style-type: none;
-		  position: absolute; top: 100%; left: 0; background: rgba(0, 6, 79, 0.9);
-		  min-width: 200px; display: none; flex-direction: column; border-radius: 6px;
-		}
-		.menu li:hover > ul { display: flex;}
-		.menu li ul li ul { left: 100%; top: 0; }
-
-		/* Dropdown link */
-		.menu li ul a {padding: 0.5rem 0.75rem; color: #fff; text-decoration: none;}
-
-		/* --- Mobile hamburger --- */
-		.hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px;}
-		.hamburger span { display: block; width: 24px; height: 3px; background: #fff; }
-
-
-		/* Mobile menu hidden by default */
-		@media (max-width: 768px) {
-		  .menu {
-			position: absolute; top: 100%; right: 0;
-			background: rgba(0,0,0,0.9); flex-direction: column;
-			width: 220px; max-height: 0; overflow: hidden;
-			transition: max-height 0.3s ease;
-		  }
-
-		  .menu.show { max-height: 600px; } /* 展開 */
-		  .menu li ul {
-			position: static; background: rgba(0,0,0,0.8);	display: none;
-		  }
-		  .menu li.show > ul { display: flex; }
-		  .hamburger { display: flex; }
-		  .content table{ widht:90%; font-size:90%; margin-left:10px; padding:4px; }
-		}
-
-		/* Push content down */
-		header { height: 60px; }
-
-		/* --- Hero section --- */
-		.hero {
-		  background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg') no-repeat center center/cover;
-		  position: relative; min-height: 100vh; display: flex;
-		  align-items: center;  justify-content: center; overflow: hidden;
-		}
-		.hero video {
-		  position: absolute; inset: 0; width: 100%; height: 100%;
-		  object-fit: cover; z-index: 0;
-		}
-		.hero::after {
-		  content:""; position: absolute; inset:0;
-		  background: rgba(0,0,0,0.2); color:white; z-index:1;
-		}
-		.hero .content {
-		  position: relative; width:80%; z-index: 2; color: #fff; 
-		  text-align: center; padding: 1rem; margin: 10px; top:5rem;
-		  background: rgba(0,0,0,0.2); border-radius: 12px; letter-spacing: 2px;
-		}
-		.content a:link {/*padding: 0.5rem 0.75rem;*/ color: #fff; text-decoration: none;}
-		.content a:hover {color:#ffd745;}
-		.content a:visited {color: #a0a0a0;}
-		
-		.contenth1 {
-			text-align:center; margin:5px 0px 5px 0px;
-		/*	font-size:18px;*/
-			border-bottom: solid 2px; border-top: solid 2px; 
-			padding:10px; text-transform: uppercase;
-			}
-		.contenth3 {font-weight:300; letter-spacing:0.3em; 	margin: 10px 50px 10px 50px;}
-
-		/* --- Pattern sections --- */
-		.panel {
-		  padding: 6rem 1rem; text-align: center; background: rgba(0, 0, 0, 0.2); }
-		.panel .content {
-			position: relative; left: 60px; width: 85%;	z-index: 2; color: #fff;
-			text-align: center ; padding: 2rem;	margin: 10px 20px 10px 20px;
-		/*	background: rgba(0, 0, 0, 0.4);*/ border-radius: 12px;
-		}
-		
-		.panel table{
-			width:70%; padding: 10px; border: 4px solid; border-radius: 10px;
-			margin: 10px 30px 20px 10px; text-align: center; line-height: 50px;
-		}
-		.panel td{vertical-align: top;	height:60px;}
-		
-		.pattern-1 {
-	  /*    background: repeating-linear-gradient(
-			45deg, #f5f5  f5, #f5f5f5 20px, #e0e0e0 20px, #e0e0e0 40px
-		  );*/
-			background-image: url("../imgs/acc_building.jpg");
-			background-size: cover; /* Scales the image to cover the entire viewport */
-			background-position: center center; /* Centers the image horizontally and vertically */
-			background-repeat: no-repeat; /* Prevents the image from repeating */
-			background-attachment: fixed; /* Keeps the background image fixed while scrolling content */
-			margin: 0; /* Removes default body margin, preventing whitespace */
-			height: 100vh; /* Ensures the body takes up the full viewport height */
-			color: #ffffff;
-		/*	opacity: 0.5; /* 50% transparency */
-		}
-		.pattern-2 {
-		  background: repeating-linear-gradient(
-			-45deg, #fafafa, #fafafa 25px, #ddd 25px, #ddd 50px
-		  );
-		}
-		
-		h3{	padding:5px 0 5px 0px;}
-				
-		p2{ padding:5px 20px 5px 30px; line-height:30px; }
-		
-		.content table{ widht:60%; backrgound-color: white solid 2; border-radius: 10px; left:30px; }
-		  
-		@media (max-width: 768px) {
-			.p2{ padding:5px 20px 5px 30px; line-height:18px;}
-			.contenth3 { font-weight:300; letter-spacing:0.3em;	line-height:12px; margin: 10px 10px 10px 5px; }
-			.contenth1 {
-				text-align:center; margin:5px 0px 5px 0px; font-size:18px;
-				border-bottom: solid 2px; border-top: solid 2px; padding:10px;
-				text-transform: uppercase;
-			}
-			.table1 {
-			  widht:100%; border: white solid 2; font-size:85%;
-			  border-radius: 5px; left:30px; vertical-align: top;
-			}
-			
-			.hero .content {
-			  position: relative; width:75%; z-index: 2; color: #fff;
-			  text-align: center; padding: 1rem; margin: 5px; size:small;
-			  background: rgba(0,0,0,0.4); border-radius: 12px; letter-spacing: 2px;
-		}
-			}
-			
-			.panel .content {
-				position: relative;	left: 0px; width: 95%; z-index: 2;
-				color: #fff; line-height:10px; text-align: justify ;
-				padding: .5rem;	margin: 10px 20px 10px 20px; border-radius: 10px;
-				/*	background: rgba(0, 0, 0, 0.4);*/
-			}
-			
-			.panel table{ width:80%; padding: 10px;	border: 4px solid;
-				border-radius: 10px; margin: 10px 30px 20px 10px;
-				text-align: center;	line-height: 30px;
-			}
-			
-			.panel td{ vertical-align: top;	text-align: justify; height:60px; }	
-		}
-		
-		.table1 {
-			  width:60%;
-			  border: 2px solid white;
-			  border-radius: 5px;
-			  align: center;
-			  margin:5px;
-			  line-height: 30px;
-			  padding: 1rem;
-		}
-		
-		h3{
-				padding:5px 0 5px 5px;
-		}
-				
-		p{
-				padding:5px 20px 5px 30px;
-				line-height:30px;
-		}
-		
-		.content table{
-			  widht:60%;
-			  backrgound-color: white solid 2;
-			  border-radius: 10px;
-			  left:30px;
-		}
-
-	footer{
-		background: -webkit-linear-gradient(top, rgba(26,6,79,0.5), rgba(13,7,41,1));
-		/*background: -moz-linear-gradient(top, #000, #40205f);
-		
-		/*background: linear-gradient(top, rgba(26,6,79,0), rgba(134,98,227,1));
-		/*background: rgba(64, 32, 95, 0.5);*/
-	/*	opacity: 0.57;*/
-		color: white !important;
-		height: 100px
-		padding: 2em;
-		text-align: center;
-		align-items: center;
-		justify-content: center;
-	}
-
-	footer p{
-		margin-top: 0.975em;
-		font-size: 0.9em;
-		line-height: 1.3;
-		color: white;
-	}
-
-	.copyright{
-		font-size: 0.875em;
-		margin-top: 1.1em;
-		color: darkgray;
-	}
-
-		footer p{
-		margin-top: 0.975em; font-size: 0.9em; color: white; text-align:center;
-	}
-	/*  移動式方框   */
-	.draggable-box {
-	  width: 150px; height: auto; background: rgba(0, 123, 255, 0.8);
-	  color: white; display: flex; align-items: center; justify-content: center; 
-	  position: absolute; top: 100px; left: 100px; border-radius: 10px; cursor: move; 
-	  user-select: none; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: box-shadow 0.2s;
-	}
-
-	.draggable-box:active {box-shadow: 0 8px 20px rgba(0,0,0,0.5);}
-
-	  /* 浮動方框 */
-	  .floating-box {
-		position: fixed;       /* 固定在畫面上 */
-		top:100px;
-		/*bottom: 20px;          /* 距離底部 20px */
-		right: 10px;           /* 距離右邊 20px */
-		background: rgba(60,60,60,0.7);  /* 半透明黑底 */
-		color: #fff;
-		padding: 10px;
-		border-radius: 15px;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-		width: 20%;
-		height: auto;
-		z-index: 88;         /* 確保在最上層 */
-		transition: opacity 0.5s ease;
-		animation: slideUp 3s forwards;
-
-	  }
-
-	  /* 可選：滑鼠移入特效 */
-	  .floating-box:hover { background: rgba(70,70,180,1); }
-
-	  /* 手機板調整 */
-	  @media (max-width: 768px) {
-		.floating-box { bottom: 10px; right: 10px;  width: 160px;  padding: 15px; font-size: 0.9rem; }
-	  }
-	</style>
- </head>
+</head>
 <body>
-
-<!-- Navbar -->
-<nav>
-	<div class="nav-container">
-	    <div class="logo"><a href="index.html" class="logo"><img src="imgs/new_acclogo.png" alt="Logo" /></a></div>
-		<div class="menu-toggle" id="menuToggle">
-			<span></span><span></span><span></span>
-		</div>
-
-      <!-- Hamburger (mobile only) -->
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-
-      <!-- Menu -->		
-	<ul class="menu" id="menu">
+  <!-- 導覽列 -->
+  <header>
+    <div class="logo"><a href="index.html" class="logo"><img src="imgs/new_acclogo.png" alt="Logo" /></a></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+	
+    <nav>
+      <ul>
         <li><a href="#">簡介 ▼</a>
 			<ul>
 				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/constitution.html">信仰與規章</a></li>
@@ -302,7 +29,9 @@
 				<li><a target="_blank" href="https://austinchinesechurch.org/WeeklyDocs/MandarinCoworkers.pdf">華語部同工</a></li>
 			</ul>
 		</li>
-			<li><a target="_blank" href="fellowships.html">團契</a></li>
+        <li><a href="https://docs.google.com/document/d/e/2PACX-1vQFofynJeO5q1srUn2seLbCLktSl-vCQbwJAxYUqrYu5BRMEEQZDWuMFPWqSRX-H5rI91EYZu3_RRez/pub">團契</a></li>
+		<!--<li><a href="fellowships.html">團契</a></li>-->
+		
 		<li><a href="pray.html">禱告</a></li>
 		<li><a href="#">每日讀經靈修 ▼</a>							
 			<ul>
@@ -314,8 +43,7 @@
 			<ul>
 				<li><a target="_blank" href="https://austinchinesechurch.org/docs/SSchool.pdf">本季主日學時間地點</a></li>
 				<li><a target="_blank" href="https://austinchinesechurch.org/docs/currentquarter.pdf">本季主日學內容</a></li>
-				<li><a target="_blank" href="ss_history.html">主日學課程歷史</a></li>				
-				<!--<li><a target="_blank" href="https://lssaustin.org/Man/index.php/m-sundayschool/classhistory">主日學課程歷史</a></li>-->
+				<li><a target="_blank" href="https://lssaustin.org/Man/index.php/m-sundayschool/classhistory">主日學課程歷史</a></li>
 			</ul>
 		</li>
 		<li><a href="#">相關事工 ▼</a>
@@ -334,7 +62,7 @@
 		</li>
 		<li><a href="#">資源 ▼</a>
 			<ul>
-		<!--		<li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1Pn-9NTwUQutUYn0rwWzXPbtEHNVENrTFkWkqzsPO_cY/">主日證道</a></li>-->
+				<li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1Pn-9NTwUQutUYn0rwWzXPbtEHNVENrTFkWkqzsPO_cY/">主日證道</a></li>
 				<li><a target="_blank" href="https://www.youtube.com/@AustinChineseChurch/playlists">主日證道影片</a></li>
 				<li><a target="_blank" href="https://austinchinesechurch.org/WeeklyDocs/SundayBulletins.htm">教會週報</a></li>
 				<li><a target="_blank" href="yearreport.html">年度事工報告</a></li>
@@ -344,128 +72,174 @@
 		</li>
 		<li><a target="_blank" href="https://acc.churchcenter.com/giving" class="button primary">網路奉獻</a></li>
 		<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/" class="button primary">教會主頁</a></li>
-
       </ul>
-    </div>
-</nav>
+    </nav>
+  </header>
 
-  <!-- 空header避免被navbar遮住 
-	<header></header> -->
-<br>
 
-<section class="hero">
-	<div class="content">
-		<h1 >奧斯汀華人教會核心價值</h1>
-		<h2>ACC Core Values</h2><br><br>
+<section class="panel pattern-1">
+	
+    <div class="card">
+		<h1>奧斯汀華人教會核心價值<br>ACC Core Values</h1>
 			<ol>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h4>Bible 聖經</h4>
+				<li> <h3>Bible 聖經</h3>
 					<p>We believe that God's Word is the catalyst for spiritual transformation and growth. 
 					The Bible is the authoritative guide for what we believe and how we should live. (2 Timothy 3:16)<br>
-					我們相信神的話語促使靈命改造和成長。聖經是我們信仰和生活的權威指南。 （提摩太後書3:16）
+					我們相信神的話語促使靈命改造和成長。聖經是我們信仰和生活的權威指南。 （提摩太後書3:16）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h4>Worship 敬拜</h4><br>
-					We believe that our God is supreme and sovereign. He is the focus of our worship and He is worthy of our worship, 
+				<li> <h3>Worship 敬拜</h3>
+					<p>We believe that our God is supreme and sovereign. He is the focus of our worship and He is worthy of our worship, 
 					both individually and corporately. (Rom 12:1-2)<br>
-					我們相信我們的神是至高至尊丶 並擁有絕對主權的神。祂是我們個人和集體崇拜的焦點，是配得我們敬拜的。 （羅馬書12:1-2）
+					我們相信我們的神是至高至尊丶 並擁有絕對主權的神。祂是我們個人和集體崇拜的焦點，是配得我們敬拜的。 （羅馬書12:1-2）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h4>Prayer 祈禱</h4><br>
-					We believe that prayer is the foundation of all our ministries and therefore, His house must be a house of prayer.(Isaiah 56:7)<br>
-					我們相信祈禱是我們所有事工的基礎，因此神的家必須是一個禱告的殿。 （以賽亞書56:7）
+				<li > <h3>Prayer 祈禱</h3>
+					<p>We believe that prayer is the foundation of all our ministries and therefore, His house must be a house of prayer.(Isaiah 56:7)<br>
+					我們相信祈禱是我們所有事工的基礎，因此神的家必須是一個禱告的殿。 （以賽亞書56:7）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h4>Outreach 佈道</h4><br>
-					We value a lifestyle of sharing the love of God locally and globally by spreading His Good News through evangelism,
+				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h3>Outreach 佈道</h3>
+					<p>We value a lifestyle of sharing the love of God locally and globally by spreading His Good News through evangelism,
 					missions, and community service. We understand that every ACC member is called to be an ambassador for Christ.
 					(Matthew 28:19-20, 2 Corinthians 5:20)<br>
 					我們重視在生活中與人分享神的愛，並通過佈道、宣教和社區服務在本地和全球傳揚福音。
-					我們領悟每一個奧斯汀華人教會的成員都被召為基督的使者。 （馬太福音 28:19-20，哥林多後書 5:20）
+					我們領悟每一個奧斯汀華人教會的成員都被召為基督的使者。 （馬太福音 28:19-20，哥林多後書 5:20）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h4>Fellowship 團契</h4><br>
-					We believe in authentic fellowship groups that are relational and sacrificial in building up the body of Christ. (Acts 2:42-47)<br>
-					我們相信真正的團契表現在相互關心，以犧牲的精神來建立基督的身體。 （使徒行傳 2:42-47）
+				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h3>Fellowship 團契</h3>
+					<p>We believe in authentic fellowship groups that are relational and sacrificial in building up the body of Christ. (Acts 2:42-47)<br>
+					我們相信真正的團契表現在相互關心，以犧牲的精神來建立基督的身體。 （使徒行傳 2:42-47）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h4>Unity 合一</h4><br>
-					We believe that it is essential and effective for our leaders to seek, discern, and obey the Lord’s will as a team.  
+				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h3>Unity 合一</h3>
+					<p>We believe that it is essential and effective for our leaders to seek, discern, and obey the Lord’s will as a team.  
 					We value honest communication and mutual respect so that God will be glorified and our Church will be purposeful. (Ephesians 4:11-13,15)<br>
-					我們相信領袖們必須有效地融合為一個團隊， 去共同尋求、辨識並服從主的旨意。我們重視以坦誠的溝通和相互的尊重來榮耀神，使教會更有清晰的方向。 （以弗所書 4:11-13,15）
+					我們相信領袖們必須有效地融合為一個團隊， 去共同尋求、辨識並服從主的旨意。我們重視以坦誠的溝通和相互的尊重來榮耀神，使教會更有清晰的方向。 （以弗所書 4:11-13,15）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h4>Discipleship 門徒造就</h4><br>
-					We believe that every Christian must continually grow and be transformed as a disciple of Christ through teaching,
+				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h3>Discipleship 門徒造就</h3>
+					<p>We believe that every Christian must continually grow and be transformed as a disciple of Christ through teaching,
 					preaching, application of God’s Word, personal mentoring, and faithful serving. (Ephesians 4:1-3, 15-16)<br>
-					我們相信每一個基督徒必須不斷成長，通過教導、訓誨、活用神的話語、個人輔導和忠心的事奉轉化成基督的門徒。 （以弗所書 4:1-3，15-16）
+					我們相信每一個基督徒必須不斷成長，通過教導、訓誨、活用神的話語、個人輔導和忠心的事奉轉化成基督的門徒。 （以弗所書 4:1-3，15-16）</p>
 				</li>
-				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h4>Family 家庭</h4><br>
-					As a multi-ethnic Chinese church, we believe in God-centered family relationships and are united as one church
+				<li style="text-align:justify; margin-left: 2rem; margin-bottom:1rem;"> <h3>Family 家庭</h3>
+					<p>As a multi-ethnic Chinese church, we believe in God-centered family relationships and are united as one church
 					that encourages a diversity of cultures and life stages.(1 Corinthians 12:12-13; 2 Timothy 1:5）<br>
-					作為一個包涵多樣文化背景的華人教會，我們相信教會是以神為中心的大家庭，在合一中鼓勵多樣性的文化和容納不同年齡的成員。（哥林多前書 12:12-13; 提摩太後書 1:5） 
+					作為一個包涵多樣文化背景的華人教會，我們相信教會是以神為中心的大家庭，在合一中鼓勵多樣性的文化和容納不同年齡的成員。（哥林多前書 12:12-13; 提摩太後書 1:5）</p>
 				</li>
+	</div>
+</section>
 
-			<br><br><br><br>
-	
-    </div>
+<section class="panel pattern-1">
+	<div class="card">
+		<h1>奧斯汀華人教會的使命<br>ACC Mission Statement</h1><br>
+		<h3>ACC’s mission is to make disciples of Jesus Christ by sharing His good news with all people, especially with those of Chinese descent, 
+		and helping them grow as followers of Christ, so that together we will bear witness of His glory in Austin, in the surrounding areas,
+		and to the ends of the earth.<br>
+		奧斯汀華人教會的使命是向萬民,傳揚耶穌基督的福音，從奧斯汀及周邊地區，直到全世界，特別是有華人背景的對象，並幫助他們成長為跟隨基督的門徒，一同在世上為神的榮耀作見証。</h3>
+	</div>
+</section>
+<section class="panel pattern-1">
+	<div class="card">
+		<h1>奧斯汀華人教會的異象<br>ACC Vision Statement</h1><br>
+		<h3>We envision being a church that uses its unique ethnic backgrounds to passionately, purposefully, 
+		and compassionately reach out to everyone that God has placed in our lives with the Gospel of Jesus Christ, 
+		both here in Austin, and to the world.<br>
+		我們展望我們的教會用獨特的種族背景，熱情地、刻意地、有愛心地向所有神放在我們生
+		命中，不論在本地或世界各地的人，傳講耶穌基督的福音。<br><br>
+		We envision being a church that is intentional in knowing and applying God’s Word, from the new believer to disciple, 
+		with a commitment to be teachable and to teach others. We are to equip the saints in both knowledge and experience for God’s Kingdom.<br>
+		我們展望教會從初信到成熟的門徒都能刻意地了解並活用神的話語，忠於受教和教導別人。我們要在知識和經歷上裝備聖徒為神國效力。<br><br>
+		We envision being a church that effectively participates in God’s Kingdom through missions abroad, and also intentional investment 
+		in international students and professionals that He brings through our church. We desire to love, lead, 
+		and train them so that they are ready to minister anywhere and anytime as His ambassadors.<br>
+		我們展望教會有效地參與神國的擴展， 參與外地宣教，同時刻意地裁培神帶到我們當中的國際學生和專業人士，我們願意關愛、引導和訓練他們，使他們準備好隨時隨地以基督使者的身份服侍他人。<br><br>
+		We envision vibrant fellowship groups where love, transparency, accountability, and encouragement permeate the body of Christ 
+		so that life transformation and spiritual maturity occurs.<br>
+		我們展望在充滿活力的團契中，藉着愛、真誠、互相負責、彼此鼓勵，瀰漫著基督的身體，耳濡目染， 使生命能改變﹐靈性更成熟。<br><br>
+		We envision being a church that is intentional in helping each member find and develop his/her spiritual gifts, 
+		exhorting them to use these gifts regularly and wisely for God’s glory and for the edification of the Church.<br>
+		我們展望教會刻意地幫助每個會員發掘和發揮他的屬靈恩賜，並鼓勵他們經常明智地用這些恩賜榮耀神、造就教會。<br><br>
+		We envision being a church that effectively reaches out to our community in Jesus’ name to serve the needy and the suffering. 
+		We are to share His Gospel in both word and deed so that they can have a personal relationship with Jesus Christ.
+		我們展望教會以耶穌的名有效地服務社會，幫助有需要和困苦中的人。我們以言語和行動跟他們分享耶穌的福音，使他們能和耶穌基督建立個人的關係。<br><br>
+		We envision being a church that proactively trains believers to be servant-leaders by intentionally passing the baton of faith 
+		and practice to the younger generations, and by developing future pastors, missionaries, andbi-vocational ministers.<br>
+		我們展望教會積極地培訓信徒成為僕人領袖，刻意地傳下信仰和經驗給年輕接棒人，並培養未來的牧師、宣教士和帶職事奉的傳道人。<br><br>
+		We envision a house of worship where people actively pursue God through Spiritfilled praises, powerful prayer, 
+		and life-changing preaching/teaching in order to cultivate faithful followers of Jesus Christ.<br>
+		我們展望教會是個敬拜的家，人人通過聖靈充滿的讚美、有力的祈禱和改變生命的講道和訓誨，積極地追求神，目的在培養耶穌基督忠實的追隨者。</h3>
+	</div>
+
   </section>
 
-  <!-- Pattern Section 1 --
-  <section class="panel pattern-1">
-	
-    <div class="panel content">
-		<div align="center">
-			<h1>主日敬拜時間</h1><br>
-			<table>
-				<tr>
-					<td align="center"><h3>09:30AM</h3></td><td><h3>成人主日學<br>兒童部活動</h3></td>
-				</tr>
-				<tr>
-					<td><h3>11:10AM</h3></td><td><h3>主日崇拜</h3></td>
-				</tr>		
-				<tr>
-					<td><h3>12:15PM</h3></td><td><h3>主日午餐</h3></td>
-				</tr>
-				<tr><td colspan="2"><br><p>成人聚會時間同時有：嬰幼兒照顧，兒童主日學/兒童崇拜，和青少年聚會。</p></td></tr>
-			</table>
-
-	  </div>
-    </div>
-  </section>
-
-  <!-- Pattern Section 2 --
-  <section class="panel pattern-2">
-    <div class="content">
-      <h2>圖案背景區塊二</h2>
-      <p>這裡可以放更多內容或特色介紹。</p>
-    </div>
-  </section>
-  -->
-  <script>
-    // 手機版選單切換
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('menu');
-
-    hamburger.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
-
-    // 手機版支援多層展開
-    document.querySelectorAll('.menu li > a').forEach(link => {
-      link.addEventListener('click', e => {
-        const parentLi = e.target.parentElement;
-        if (parentLi.querySelector('ul')) {
-          e.preventDefault(); // 防止直接跳連結
-          parentLi.classList.toggle('show');
-        }
-      });
-    });
-  </script>
-  
-  <footer>
-	<h3>奧斯汀華人教會<br>Austin Chinese Church</h3>
+   
+   <footer>
+	<h4>奧斯汀華人教會<br>Austin Chinese Church</h4>
 	<p>11118 Dessau Road, Austin, TX 78754<br>Phone: 512-339-8675<br>Fax: 512-339-9556<br>
 	<a style="color: white; background-color: transparent; text-decoration: underline;" href="mailto:contact@austinchinesechurch.org">contact@austinchinesechurch.org</a></p>
 	<p class="copyright">© Austin Chinese Church. 2023. All rights reserved.</p>
-  </footer>
+  </footer> 
+  
+  <script>
+    function toggleMenu() {
+      document.querySelector("nav").classList.toggle("active");
+    }
+
+    // Intersection Observer 逐一動畫
+    const cards = document.querySelectorAll(".card");
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // 依序延遲
+          setTimeout(() => {
+            entry.target.classList.add("show");
+          }, index * 300);
+          obs.unobserve(entry.target); // 只執行一次
+        }
+      });
+    }, { threshold: 0.3 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+  
+  <script>
+    (async function() {
+      const btnTW = document.getElementById('btn-tw');
+      const btnCN = document.getElementById('btn-cn');
+      const STORAGE_KEY = 'preferred-chinese-variant';
+
+      // 1️⃣ 載入 OpenCC 轉換器
+      const converterTW2CN = await OpenCC.Converter({ from: 'twp', to: 'cn' }); // 繁 → 簡
+      const converterCN2TW = await OpenCC.Converter({ from: 'cn', to: 'twp' }); // 簡 → 繁
+
+      // 2️⃣ 定義轉換函式（會遞迴轉換所有文字節點）
+      function traverseAndConvert(node, converter) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          node.textContent = converter(node.textContent);
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+          node.childNodes.forEach(child => traverseAndConvert(child, converter));
+        }
+      }
+
+      async function applyVariant(variant) {
+        if (variant === 'cn') {
+          traverseAndConvert(document.body, converterTW2CN);
+          btnCN.classList.add('active');
+          btnTW.classList.remove('active');
+        } else {
+          traverseAndConvert(document.body, converterCN2TW);
+          btnTW.classList.add('active');
+          btnCN.classList.remove('active');
+        }
+        localStorage.setItem(STORAGE_KEY, variant);
+      }
+
+      // 3️⃣ 綁定事件
+      btnTW.addEventListener('click', () => applyVariant('tw'));
+      btnCN.addEventListener('click', () => applyVariant('cn'));
+
+      // 4️⃣ 載入上次設定
+      const saved = localStorage.getItem(STORAGE_KEY);
+      applyVariant(saved === 'cn' ? 'cn' : 'tw');
+    })();
+  </script>
 </body>
-
 </html>
-
-
-
 
