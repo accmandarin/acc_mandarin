@@ -117,6 +117,7 @@ h3 {font-size:24px; text-align:justify; margin-top:10px;}
 		padding: 2em; text-align: center;
 		align-items: center; justify-content: center;
 	}
+	footer h3 { text-align:center; }
 	footer p{margin-top: 0.975em; font-size: 0.9em; color: white; text-align:center; }
 
 /* Floating Box */
@@ -180,6 +181,7 @@ h3 {font-size:24px; text-align:justify; margin-top:10px;}
 }
 
 </style>
+
 
 
 
