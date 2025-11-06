@@ -183,8 +183,8 @@ p { text-align:justify; font-size:larger; }
 footer {
   background: -webkit-linear-gradient(top, rgba(26,6,79,0.5), rgba(13,7,41,1));
   color: white !important;
-  height: 80px;
-  padding: 2em;
+  min-height: 80px;
+  padding: 1em;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -269,3 +269,4 @@ footer p {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
