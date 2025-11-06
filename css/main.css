@@ -168,6 +168,22 @@ p { text-align:justify; font-size:larger; }
   animation: slideUp 3s forwards;
 }
 .floating-box:hover { background: rgba(70,70,180,1); }
+/* 添加此規則：確保浮動方框內的連結是白色且無底線 */
+.floating-box a {
+  color: #fff;             /* 設定字體顏色為白色 */
+  text-decoration: none;  /* 移除底線 */
+}
+
+/* 您也可以添加一個 hover 狀態讓使用者知道它是可點擊的 */
+.floating-box a:hover {
+  text-decoration: underline; /* 滑鼠移入時顯示底線 */
+  color: #ffd745;             /* 使用您在導覽列中定義的強調色 */
+}
+
+/* 確保當滑鼠懸停在整個方框上時，連結樣式仍然保持 */
+.floating-box:hover a {
+  color: #fff; /* 保持白色或您想要的顏色 */
+}
 
 @media (max-width: 768px) {
   .floating-box {
@@ -269,6 +285,7 @@ footer p {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 
