@@ -1,6 +1,8 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin:0; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin:0;}
+	html, body { min-height: 100vh; display: flex; flex-direction: column; }
+	body > footer { margin-top: auto; }
 
     /* --- 導覽列 --- */
     header {
@@ -151,6 +153,7 @@
 }
 
   </style>
+
 
 
 
