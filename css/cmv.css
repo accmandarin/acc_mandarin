@@ -76,9 +76,9 @@ nav ul li:hover > ul { display: flex; }
 }
 .hero .content {
   background: rgba(0,0,0,0.5); color: white;
-  padding: 2rem; border-radius: 10px;
+  padding: 2rem; border-radius: 10px; 
   text-align: center; width: 90%;
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 h1 {font-size:28px; margin-bottom:10px; text-align:center; }
@@ -181,6 +181,7 @@ h3 {font-size:24px; text-align:justify; margin-top:10px;}
 }
 
 </style>
+
 
 
 
