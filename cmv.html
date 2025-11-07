@@ -9,13 +9,18 @@
 
 </head>
 <body>
+<!-- 主選單內容載入 -->
+<div id="content-container">
+	<!-- 主選單內容載入 -->
+</div>
+<!--
   <header>
     <div class="logo"><a href="index.html" class="logo"><img src="imgs/new_acclogo.png" alt="Logo" /></a></div>
     <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
       <div></div><div></div><div></div>
     </div>
 	
-    <nav id="navMenu"> <!-- Added id="navMenu" -->
+    <nav id="navMenu"> <!-- Added id="navMenu" --
       <ul>
         <li><a href="#">簡介 ▼</a>
 			<ul>
@@ -27,9 +32,9 @@
 			</ul>
 		</li>
         <li><a href="https://docs.google.com/document/d/e/2PACX-1vQFofynJeO5q1srUn2seLbCLktSl-vCQbwJAxYUqrYu5BRMEEQZDWuMFPWqSRX-H5rI91EYZu3_RRez/pub">團契</a></li>
-		<!--<li><a href="fellowships.html">團契</a></li>-->
+		<!--<li><a href="fellowships.html">團契</a></li>--
 		
-		<!--<li><a href="pray.html">禱告</a></li>-->
+		<!--<li><a href="pray.html">禱告</a></li>--
 		<li><a href="#">禱告與靈修 ▼</a>							
 			<ul>
 				<li><a href="pray.html">禱告</a></li>
@@ -43,7 +48,7 @@
 				<li><a target="_blank" href="https://austinchinesechurch.org/docs/currentquarter.pdf">本季主日學內容</a></li>
 				<li><a target="_blank" href="https://lssaustin.org/Man/index.php/m-sundayschool/classhistory">主日學課程歷史</a></li>
 			</ul>
--->
+
 		</li>
 		<li><a href="#">主日學與事工 ▼</a>
 			<ul>
@@ -69,15 +74,16 @@
 				<li><a target="_blank" href="https://austinchinesechurch.org/WeeklyDocs/SundayBulletins.htm">教會週報</a></li>
 				<li><a target="_blank" href="yearreport.html">年度事工報告</a></li>
 				<li><a target="_blank" href="https://sites.google.com/austinchinesechurch.org/acc-education-building">建堂進度</a></li>
-				<!--	<li><a target="_blank" href="https://lssaustin.org/Man/administrator/">網站管理</a></li> -->
+				<!--	<li><a target="_blank" href="https://lssaustin.org/Man/administrator/">網站管理</a></li> --
 			</ul>
 		</li>
-<!--		<li><a target="_blank" href="https://acc.churchcenter.com/giving" class="button primary">網路奉獻</a></li> -->
+<!--		<li><a target="_blank" href="https://acc.churchcenter.com/giving" class="button primary">網路奉獻</a></li> --
 		<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/" class="button primary">教會主頁</a></li>
       </ul>
     </nav>
   </header>
-
+-->
+				
 <section class="hero">
   <div class="content">
 		<h1>奧斯汀華人教會核心價值<br>ACC Core Values</h1>
@@ -187,6 +193,28 @@
 	<p class="copyright">© Austin Chinese Church. 2025. All rights reserved.</p>
   </footer>
 
+<!-- 獲取主選單(header.html)檔案的內容 -->
+<script>
+  // 獲取外部檔案的內容
+  fetch('header.html')
+    .then(response => {
+      // 確保回應成功
+      if (!response.ok) {
+        throw new Error('無法載入檔案');
+      }
+      // 將回應解析為純文字
+      return response.text();
+    })
+    .then(htmlText => {
+      // 找到容器元素並將獲取的 HTML 文字設定為其內容
+      document.getElementById('content-container').innerHTML = htmlText;
+    })
+    .catch(error => {
+      console.error('載入內容時出錯:', error);
+      document.getElementById('content-container').innerHTML = '<p>載入內容失敗。</p>';
+    });
+</script>
+	
 <script>
   // 設定 header 高度
   function updateHeaderHeight() {
@@ -239,6 +267,7 @@
 
 </body>
 </html>
+
 
 
 
