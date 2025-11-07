@@ -135,6 +135,7 @@
 		height: 100px; padding: 2em; margin-top: 0;
 		text-align: center;	align-items: center;
 		justify-content: center;
+		height: auto;
 	}
 	
 	footer p{
@@ -145,6 +146,7 @@
 }
 
   </style>
+
 
 
 
