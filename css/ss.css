@@ -104,14 +104,13 @@
     /* --- Section 2 (卡片區) --- */
     .section {
       background: url('https://accmandarin.github.io/acc_mandarin/imgs/ss_bk.jpg') no-repeat center center/cover;
-	  /*background: url('https://picsum.photos/1920/1080?blur=3') no-repeat center center/cover;*/
-      padding: 100px 20px; display: flex; justify-content: center;
-      gap: 30px; flex-wrap: wrap;
+      padding: 80px 20px 20px; display: flex; justify-content: center;
+      gap: 20px; flex-wrap: wrap;
     }
     .card {
 	  text-align: center; background: rgba(255, 255, 255, 0.9);
 	  width: 350px; padding: 20px; border-radius: 20px; 
-	  box-shadow: 0px 5px 20px rgba(200,200,200,0.5);
+	  box-shadow: 0px 5px 20px rgba(200,200,200,0.5); margin-bottom:2rem;
       opacity: 10; transform: translateY(50px); text-decoration: none;
     }
     .card.show {
@@ -132,16 +131,9 @@
 	
 	footer{
 		background: -webkit-linear-gradient(top, rgba(26,6,79,0.5), rgba(13,7,41,1));
-		/*background: -moz-linear-gradient(top, #000, #40205f);
-		
-		/*background: linear-gradient(top, rgba(26,6,79,0), rgba(134,98,227,1));
-		/*background: rgba(64, 32, 95, 0.5);*/
-	/*	opacity: 0.57;*/
 		color: white !important;
-		height: 100px
-		padding: 2em;
-		text-align: center;
-		align-items: center;
+		height: 100px; padding: 2em; margin-top: 0;
+		text-align: center;	align-items: center;
 		justify-content: center;
 	}
 	
@@ -153,6 +145,7 @@
 }
 
   </style>
+
 
 
 
