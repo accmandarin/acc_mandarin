@@ -4,235 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>奧斯汀華人教會華語堂團契及家庭小組</title>
-  <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+  <link rel="stylesheet" href="css/fellowships.css" />
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; }
-
-    /* --- 導覽列 --- */
-    header {
-      position: fixed; top: 0; left: 0; width: 100%;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 0.5rem 1rem; background: rgba(20,6,79,0.8);
-      z-index: 1000; backdrop-filter: blur(20px);
-    }
-    header .logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
-	    /* Logo */
-    .logo {
-      display: flex; align-items: center;
-      color: #fff; font-weight: bold;
-      text-decoration: none; font-size: 1.2rem;
-    }
-    .logo img { height: 80px; margin-right: 0.5rem; }
-/*	nav {
-      width: 100%;
-	  background: rgba(20,6,79,0.7);
-      backdrop-filter: blur(6px);
-      z-index: 1000;
-    } */
-    nav ul { list-style: none; display: flex; }
-    nav ul li { position: relative; }
-    nav ul li a {
-      display: block; padding: 10px 20px; color: #fff; text-decoration: none;
-    }
-    nav ul li a:hover { background: rgba(25,55,155,0); color:#ffd745; }
-
-    /* 下拉選單 (桌機版 hover) */
-    nav ul ul {
-      position: absolute; top: 100%; left: 0;
-      background: rgba(0,6,79,0.9); 
-      display: none; flex-direction: column; min-width: 180px;
-    }
-    nav ul li:hover > ul { display: flex; }
-    nav ul ul li a { padding: 10px; }
-
-    /* 漢堡選單按鈕 */
-    .menu-toggle {
-      display: none; flex-direction: column; cursor: pointer;
-    }
-    .menu-toggle div {
-      width: 25px; height: 3px; background: #fff; margin: 4px 0;
-      transition: all 0.3s ease;
-    }
-
-	.content { text-align: center; margin-top:50px; padding:10px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px;	}
-	.content1 { width:75%; text-align: center; margin-top:50px; padding:10px; color:white; background: rgba(0, 0, 0, 0.5); border-radius: 15px; }
-
-    /* 手機 / 平板樣式 */
-    @media (max-width: 768px) {
-	
-	.content1 { width:110%; text-align: center; margin-top:50px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px; }
-	h1{ font-size:20px;}
-      nav {
-        position: absolute; top: 60px; right: 0;
-        width: 220px; background: rgba(0,0,0,0.95);
-        max-height: 0; overflow: hidden;
-        transition: max-height 0.3s ease-out;
-      }
-      nav.active { max-height: 500px; } /* 展開效果 */
-
-      nav ul {
-        flex-direction: column; width: 100%;
-      }
-      nav ul li { border-bottom: 1px solid rgba(255,255,255,0.1); }
-      nav ul li a { padding: 12px 16px; }
-
-      /* 手機版下拉選單：預設隱藏 */
-      nav ul ul {
-        position: static;
-        display: none;
-        background: rgba(0,0,0,0.8);
-      }
-      nav ul li.active > ul {
-        display: flex;
-      }
-
-      .menu-toggle { display: flex; }
-	  
-	  .content {font-size:80%; width:95%; }
-    }
-	
-
-
-    /* --- Section 1 (影片背景) --- */
-    .hero {
-      position: relative; height: 100vh; width: 100%; overflow: hidden;
-      display: flex; justify-content: center; align-items: center;
-    }
-    .hero video {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      object-fit: cover; z-index: -1;
-    }
-    .hero .content {
-      color: #fff; text-align: center; background: rgba(0,0,0,0.5);
-      padding: 30px; border-radius: 15px;
-    }
-
-    /* --- Section 2 (卡片區) --- */
-    .section {
-      background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg') no-repeat center center/cover;
-	  /*background: url('https://picsum.photos/1920/1080?blur=3') no-repeat center center/cover;*/
-      padding: 100px 20px; display: flex; justify-content: center;
-      gap: 30px; flex-wrap: wrap;
-    }
-    .card {
-	  text-align: center;
-      background: #fff; width: 350px; padding: 20px;
-      border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-      opacity: 0; transform: translateY(50px);
-	  text-decoration: none;
-    }
-    .card.show {
-      animation: slideUp 1s forwards;
-    }
-	.card p {text-align:justify; text-decoration: none; }
-	
-	.clink {color: black; background-color: transparent; text-decoration: none; }
-/*	a:visited {color: black; background-color: transparent; text-decoration: none; }
-*/	
-	
-    @keyframes slideUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .card img { max-width: 100%; border-radius: 10px; }
-    .card h3 { margin: 15px 0 10px; }
-    .card p { color: #333; }
-	
-	footer{
-		background: -webkit-linear-gradient(top, rgba(26,6,79,0.5), rgba(13,7,41,1));
-		/*background: -moz-linear-gradient(top, #000, #40205f);
-		
-		/*background: linear-gradient(top, rgba(26,6,79,0), rgba(134,98,227,1));
-		/*background: rgba(64, 32, 95, 0.5);*/
-	/*	opacity: 0.57;*/
-		color: white !important;
-		height: 100px
-		padding: 2em;
-		text-align: center;
-		align-items: center;
-		justify-content: center;
-	}
-	
-	footer p{
-	margin-top: 0.975em;
-	font-size: 0.9em;
-	line-height: 1.3;
-	color: white;
-}
-  </style>
 </head>
 <body>
   <!-- 導覽列 -->
-  <header>
-    <div class="logo"><a href="index.html" class="logo"><img src="imgs/new_acclogo.png" alt="Logo" /></a></div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div></div><div></div><div></div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">簡介 ▼</a>
-			<ul>
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/constitution.html">信仰與規章</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/church_history.html">教會歷史</a></li>
-				<li><a target="_blank" href="https://accmandarin.github.io/acc_mandarin/PDF/%E5%83%B9%E5%80%BC%E8%88%87%E7%95%B0%E8%B1%A1.pdf">價值與異象</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.org/WeeklyDocs/MandarinCoworkers.pdf">華語部同工</a></li>
-			</ul>
-		</li>
-        <li><a href="https://docs.google.com/document/d/e/2PACX-1vQFofynJeO5q1srUn2seLbCLktSl-vCQbwJAxYUqrYu5BRMEEQZDWuMFPWqSRX-H5rI91EYZu3_RRez/pub">團契</a></li>
-		<!--<li><a href="fellowships.html">團契</a></li>-->
-		
-		<li><a href="#">禱告與靈修 ▼</a>							
-			<ul>
-				<li><a href="pray.html">禱告</a></li>
-				<li><a href="https://austinchinesechurch.github.io/acc.github.io/html/2_bible_readerplan.html">讀經生活日記</a></li>
-				<li><a href="https://austinchinesechurch.github.io/acc.github.io/html/1_spiritual_formation.html">讀經計畫與靈修材料</a></li>
-			</ul>
-		</li>
-
-		</li>
-		<li><a href="#">主日學與事工 ▼</a>
-			<ul>
-				<li><a target="_blank" href="https://austinchinesechurch.org/docs/SSchool.pdf">本季主日學時間地點</a></li>
-				<li><a target="_blank" href="SS_PDF/currentquarter.pdf">本季主日學內容</a></li>
-				<li><a target="_blank" href="ss_history.html">主日學課程歷史</a></li>
-				<li><a target="_blank" href="https://www.acclighthouse.org/">青少年事工 YOUTH</a></li>
-				<li><a target="_blank" href="https://www.accchildren.org/">兒童事工 CHILDREN</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/3_chinese_school.html">中文學校 CHINESE SCHOOL</a></li>
-			</ul>
-		</li>
-		<li><a href="#">聯繫我們 ▼</a>
-			<ul>
-				<li><a target="_blank" href="https://acc.churchcenter.com/giving" class="button primary">網路奉獻</a></li>			
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/direction.html">地圖指引</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/first_visit.html">初次來訪</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/recruit.html">教牧及職員招聘</a></li>
-			</ul>
-		</li>
-		<li><a href="#">資源 ▼</a>
-			<ul>
-				<li><a target="_blank" href="https://www.youtube.com/@AustinChineseChurch/playlists">主日證道影片</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.org/WeeklyDocs/SundayBulletins.htm">教會週報</a></li>
-				<li><a target="_blank" href="yearreport.html">年度事工報告</a></li>
-				<li><a target="_blank" href="https://sites.google.com/austinchinesechurch.org/acc-education-building">建堂進度</a></li>
-			</ul>
-		</li>
-		<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/" class="button primary">教會主頁</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- 第一區 (影片背景) --
-  <section class="hero">
-    <video autoplay muted loop>
-      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-    </video>
-
-    <div class="content">
-      <h1 style="color:#000;">奧斯汀華人教會華語堂團契及家庭小組</h1>
-      <p>奧斯汀華人教會現有許多個華語團契，也有好幾個家庭小組。團契及小組的主要目的是在主裡相互關愛，彼此連接，使每個肢體在主的話語上得以建造，一同興旺主的福音，以團契、小組的增長帶動教會的增長。</p>
-    </div>
-  </section>
+	<div id="content-container">
+	<!-- 主選單內容載入 -->
+	</div>
 
   <!-- 第二區 (卡片) -->
   <section class="section">
@@ -318,7 +97,7 @@
 			 <b>每月的第二,四週六早上10點輪流在組員家聚會</b></p>
 		</div>
 	</a>
-    <a class="clink" target="_blank" href="https://women.austinchinesechurch.net/">
+    <a class="clink" target="_blank" href="https://austinchinesechurch.org/Women/">
 		<div class="card">
 		  <img src="https://picsum.photos/303/200" alt="WF 婦女天地">
 		  <h3>WF 婦女天地</h3>
@@ -404,8 +183,8 @@
     <a class="clink" target="_blank" href="https://docs.google.com/document/d/1R6mUinuEoFXw4ereYioXO9vDLheIyUvWg5LmctCDdPg/edit?tab=t.0">		
 		<div class="card">
 		  <img src="https://picsum.photos/314/200" alt="BGHG 標竿小組">
-		  <h3>福禄阁家庭小组</h3>
-		  <p>福禄阁家庭小组組員主要是以Pflugerville社区附近的家庭及退休人士<br>
+		  <h3>福禄家庭小组</h3>
+		  <p>福禄家庭小组組員主要是以Pflugerville社区附近的家庭及退休人士<br>
 		     <b>每周五晚上在家庭聚會</b></p>
 		</div>
 	</a>
@@ -440,6 +219,34 @@
 -->
   </section> 
 
+   <footer>
+	<h3>奧斯汀華人教會<br>Austin Chinese Church</h3>
+	<p>11118 Dessau Road, Austin, TX 78754<br>Phone: 512-339-8675<br>Fax: 512-339-9556<br>
+	<a style="color: white; background-color: transparent; text-decoration: underline;" href="mailto:contact@austinchinesechurch.org">contact@austinchinesechurch.org</a></p>
+	<p class="copyright">© Austin Chinese Church. 2023. All rights reserved.</p>
+  </footer>
+
+<!-- 獲取主選單(header.html)檔案的內容 -->
+<script>
+  // 獲取外部檔案的內容
+  fetch('header.html')
+    .then(response => {
+      // 確保回應成功
+      if (!response.ok) {
+        throw new Error('無法載入檔案');
+      }
+      // 將回應解析為純文字
+      return response.text();
+    })
+    .then(htmlText => {
+      // 找到容器元素並將獲取的 HTML 文字設定為其內容
+      document.getElementById('content-container').innerHTML = htmlText;
+    })
+    .catch(error => {
+      console.error('載入內容時出錯:', error);
+      document.getElementById('content-container').innerHTML = '<p>載入內容失敗。</p>';
+    });
+</script>
  
   <script>
     function toggleMenu() {
@@ -462,25 +269,7 @@
 
     cards.forEach(card => observer.observe(card));
   </script>
-  <footer>
-	<h3>奧斯汀華人教會<br>Austin Chinese Church</h3>
-	<p>11118 Dessau Road, Austin, TX 78754<br>Phone: 512-339-8675<br>
-	<a style="color: white; background-color: transparent; text-decoration: underline;" href="mailto:contact@austinchinesechurch.org">contact@austinchinesechurch.org</a></p>
-	<p class="copyright">© Austin Chinese Church. 2025. All rights reserved.</p>
-  </footer>
+  
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
