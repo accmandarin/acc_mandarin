@@ -111,7 +111,7 @@
       }
       .menu li.show > ul { display: flex; }
       .hamburger { display: flex; }
-	  .content table1{
+	  .table1{
 		  widht:90%;
 		  font-size:90%;
 		  margin-left:10px;
@@ -435,6 +435,7 @@ footer p{
     }
 
   }
+
 
 
 
