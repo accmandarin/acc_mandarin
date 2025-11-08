@@ -298,12 +298,16 @@
 			border-radius: 10px;
 		}
 
-		.table .td{
+		.table {
 			width:99%; padding: 10px; border: 4px solid; border-radius: 10px;
 			text-align: center; vertical-align: top;
 			line-height: 20px; font-size: 95%;
 		}
 		
+		td{ width:99%; padding: 10px; border: 4px solid; border-radius: 10px;
+			text-align: center; vertical-align: top;
+			line-height: 20px; font-size: 95%;
+		  }
 		.panel td{
 			vertical-align: top;
 			text-align: justify;
@@ -418,6 +422,7 @@ footer p{
     }
 
   }
+
 
 
 
