@@ -257,7 +257,7 @@ footer {
   table td { border: 0 solid; margin: 5px auto; padding: 0.1rem; text-align:justify; vertical-align: top; border-radius: 10px;}
   
   .hero .content {
-    font-size:90%; width:98%; text-align:center; top:15%; padding:5px; color:white;
+    font-size:90%; width:98%; text-align:center; top:-5rem; padding:5px; color:white;
     border-radius: 10px; left: auto;
   }
 
@@ -353,3 +353,4 @@ footer p {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
