@@ -140,9 +140,9 @@ h3 {font-size:24px; text-align:justify; margin-top:10px;}
 /* 手機板 */
 @media (max-width: 768px) {
  
-	h1 {font-size:24px; margin-bottom:10px; text-align:center; }
+	h1 {font-size:22px; margin-bottom:10px; text-align:center; }
 	h3 {font-size:18px; text-align:justify; margin-top:10px;}
-	p {font-size:16px; text-align:justify;}
+	p {font-size:16px; text-align:justify; padding:1px; }
 	
   .menu-toggle { display: flex; }
   nav {
@@ -181,6 +181,7 @@ h3 {font-size:24px; text-align:justify; margin-top:10px;}
 }
 
 </style>
+
 
 
 
