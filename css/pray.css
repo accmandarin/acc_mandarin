@@ -126,7 +126,7 @@
 
     /* --- Hero section --- */
     .hero {
-	  background: url('imgs/acc_building.jpg') no-repeat center center/cover;
+	  background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg') no-repeat center center/cover;
       position: relative;
       min-height: 100vh;
       display: flex;
@@ -433,3 +433,4 @@ footer p{
     }
 
   }
+
