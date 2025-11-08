@@ -304,8 +304,7 @@
 			line-height: 20px; font-size: 95%;
 		}
 		
-		td{ width:99%; padding: 10px; border: solid; border-radius: 10px;
-			text-align: center; vertical-align: top;
+		td{ text-align: justify; vertical-align: top;
 			line-height: 20px; font-size: 95%;
 		  }
 		.panel td{
@@ -422,6 +421,7 @@ footer p{
     }
 
   }
+
 
 
 
