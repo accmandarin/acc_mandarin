@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>奧斯汀華人教會華語堂</title>
+  <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+  <link rel="stylesheet" href="css/direction.css" />
+
+<!-- CDN 載入 繁簡自動切換 opencc-js（正式版） -->
+  <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.6/dist/browser.min.js"></script>
+
+</head>
+<body>
+  <!-- 導覽列 -->
+	<div id="content-container">
+	<!-- 主選單內容載入 -->
+	</div>
+
+
+  <!-- 第一區 (影片背景) -->
+  <section class="hero">
+
+    <div class="content">
+      <h1>地圖指引</h1>
+
+		<p >  
+			Exit Braker Lane on I-35, Mopac, or 183, and go to the east bound direction. 
+			Drive all the way to the end of Braker Lane, and then make a right turn on Dessau Road. Austin Chinese Church is on your right hand side.<br>
+			從I-35, 183 或 Mopac 走 Braker Lane 出口向東, 直開到路底, 右轉至 Dessau Road, 教會在右手邊。</p><br>
+
+		<div class="mapouter" style="display:inline-block;">
+			<div class="gmap_canvas">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.292759197172!2d-97.66975878519625!3d30.371043681764625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644c917bf280f63%3A0x97cb7886a5598323!2sAustin%20Chinese%20Church!5e0!3m2!1sen!2sus!4v1680207513010!5m2!1sen!2sus"
+						width="100%" height="500" style="border:1; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+				<style>
+					.mapouter {	position: relative;	text-align: center; height: 400px; width: 100%; }
+					.gmap_canvas { overflow: hidden; background: none !important; height: 400px; width: 100%; }
+				</style>
+			</div>
+		
+		<br><br>
+		</div>
+
+		<h1 ="padding-top: 1rem;">教會建築位置圖</h1>
+		<p style="margin: 1em 0; font-size:1.1em; font-weight: bold;"></p>	
+		<img src="imgs/campus_map.jpg" style="width: 100%; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);"/>
+	</div>
+   </section>
+
+  <footer>
+	<h3 style="text-align:center;" >奧斯汀華人教會<br>Austin Chinese Church</h3>
+	<p>11118 Dessau Road, Austin, TX 78754<br>Phone: 512-339-8675<br>
+	<a style="color: white; background-color: transparent; text-decoration: underline;" href="mailto:contact@austinchinesechurch.org">contact@austinchinesechurch.org</a></p>
+	<p class="copyright">© Austin Chinese Church. 2025. All rights reserved.</p>
+  </footer>
+  
+  
+<!-- 獲取主選單(header.html)檔案的內容 -->
+<script>
+  // 獲取外部檔案的內容
+  fetch('header.html')
+    .then(response => {
+      // 確保回應成功
+      if (!response.ok) {
+        throw new Error('無法載入檔案');
+      }
+      // 將回應解析為純文字
+      return response.text();
+    })
+    .then(htmlText => {
+      // 找到容器元素並將獲取的 HTML 文字設定為其內容
+      document.getElementById('content-container').innerHTML = htmlText;
+    })
+    .catch(error => {
+      console.error('載入內容時出錯:', error);
+      document.getElementById('content-container').innerHTML = '<p>載入內容失敗。</p>';
+    });
+</script>
+
+
+<script>
+  // 設定 header 高度
+  function updateHeaderHeight() {
+    const header = document.querySelector('header'); // Use querySelector for header
+    if (header) {
+      document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
+    }
+  }
+  window.addEventListener('load', updateHeaderHeight);
+  window.addEventListener('resize', updateHeaderHeight);
+
+  // 漢堡選單切換
+  function toggleMenu() { // Define the function for onclick
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) {
+      navMenu.classList.toggle('active');
+    }
+  }
+
+  // 下拉選單在手機模式下的開合邏輯
+  document.querySelectorAll('nav ul li a').forEach(item => {
+    item.addEventListener('click', function(event) {
+      if (window.innerWidth <= 768) { // Only apply on mobile
+        const parentLi = this.parentElement;
+        if (parentLi.querySelector('ul')) { // If it has a submenu
+          event.preventDefault(); // Prevent default link action
+          parentLi.classList.toggle('active'); // Toggle 'active' for submenu display
+        }
+      }
+    });
+  });
+
+  // 浮動公告漸入漸出
+  const floatingBox = document.getElementById('floatingBox'); // Corrected variable name
+  if (floatingBox) { // Check if the element exists
+    setTimeout(() => { floatingBox.classList.add('show'); }, 500);
+    setTimeout(() => { floatingBox.classList.remove('show'); }, 8000); // Remove 'show' to hide it
+  }
+
+  // 卡片漸入效果 (NEW)
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card, index) => {
+    // Stagger the animation slightly for a nicer effect
+    setTimeout(() => {
+      card.classList.add('show');
+    }, 100 * (index + 1)); // 100ms delay per card
+  });
+
+</script>
+
+</body>
+</html>
+
