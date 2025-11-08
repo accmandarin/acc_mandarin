@@ -1,0 +1,350 @@
+/* === Global Reset === */
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none;}
+body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+a { color:#fff; }
+
+/* --- 導覽列 --- */
+header {
+  position: fixed; top: 0; left: 0; width: 100%;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5rem 1rem; background: rgba(20,6,79,0.8);
+  z-index: 1000; backdrop-filter: blur(20px);
+}
+header .logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
+
+/* Logo */
+.logo {
+  display: flex; align-items: center; color: #fff; font-weight: bold;
+  text-decoration: none; font-size: 1.2rem;
+}
+.logo img { height: 80px; margin-right: 0.5rem; }
+
+nav ul { list-style: none; display: flex; }
+nav ul li { position: relative; }
+nav ul li a { display: block; padding: 10px 20px; color: #fff; text-decoration: none;}
+nav ul li a:hover { background: rgba(25,55,155,0); color:#ffd745; }
+
+/* 下拉選單 (桌機版 hover) */
+nav ul ul {
+  position: absolute; top: 100%; left: 0;
+  background: rgba(0,6,79,0.9); 
+  display: none; flex-direction: column; min-width: 180px;
+  border-radius: 6px; z-index: 99;
+}
+nav ul li:hover > ul { display: flex; }
+nav ul ul li a { padding: 10px; }
+
+/* 漢堡選單按鈕 */
+.menu-toggle {
+  display: none; flex-direction: column; cursor: pointer;
+}
+.menu-toggle div {
+  width: 25px; height: 3px; background: #fff; margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* --- Pattern sections --- */
+.panel {
+  text-align: center;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.panel .content {
+  position: relative;
+  left: 60px;
+  width: 85%;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin: 10px 20px;
+  border-radius: 12px;
+}
+.panel table {
+  width:70%;
+  padding: 10px;
+  border: 4px solid;
+  border-radius: 10px;
+  margin: 10px 30px 20px 10px;
+  text-align: center;
+  line-height: 50px;
+}
+.panel td { vertical-align: top; height:60px; }
+
+.pattern-1 {
+  background-image: url("https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+  color: #ffffff;
+}
+.pattern-2 {
+  background: repeating-linear-gradient(
+    -45deg, #fafafa, #fafafa 25px, #ddd 25px, #ddd 50px
+  );
+}
+
+h1 { margin-bottom :30px; border-bottom: solid 2px; border-top: solid 2px;}
+h3 { padding: 20px 25px 15px 10px; }
+.p2 { padding:5px 20px 5px 30px; line-height:40px; }
+p { text-align:justify; font-size:larger; }
+
+/* --- Section 1 (影片背景) --- */
+.hero {
+  position: relative; width: 100%; overflow: hidden;
+  display: flex; justify-content: center; align-items: center;
+  background: url("https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg") center/cover no-repeat;
+}
+.hero video {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: -1;
+}
+.hero .content {
+  color: #fff; text-align: center; background: rgba(0,0,0,0.4);
+  padding: 40px; border-radius: 10px; width:75%; margin-top: -2rem;
+  position: relative;
+}
+
+/* --- 浮動方框 --- */
+.floating-box {
+  position: fixed;
+  top:115px;
+  right: 10px;
+  background: rgba(60,60,60,0.7);
+  color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  width: 20%;
+  height: auto;
+  z-index: 88;
+  transition: opacity 0.5s ease;
+  animation: slideUp 3s forwards;
+}
+.floating-box:hover { background: rgba(70,70,180,1); }
+.floating-box a {
+  color: #fff;
+  text-decoration: none;
+}
+.floating-box a:hover {
+  text-decoration: underline;
+  color: #ffd745;
+}
+.floating-box:hover a { color: #fff; }
+
+@media (max-width: 768px) {
+  .floating-box {
+    display: block; top:115px; right: 5px;
+    width: 160px; height: 450px;
+    background: rgba(60,60,60,0.7);
+    color: #fff; padding: 10px; border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+}
+
+/* --- Footer --- */
+footer {
+  background: -webkit-linear-gradient(top, rgba(26,6,79,0.5), rgba(13,7,41,1));
+  color: white !important;
+  min-height: 80px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  margin-top: 0.975em;
+  font-size: 0.9em;
+  color: white;
+  text-align:center;
+}
+
+/* === Section 2 (卡片區) 響應式修正版 === */
+.card-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  background: url("https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg") center/cover no-repeat;
+  position: relative;
+}
+.card-section::before {
+  content: "";
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+  z-index: 0;
+}
+.card-section .card {
+  position: relative;
+  z-index: 1;
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  width: 500px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+.card img { max-width: 100%; border-radius: 10px; }
+.card h3, .card h1, .card p { color: #fff; }
+
+/* --- 桌面與手機間距設定 --- */
+:root {
+  --header-height: 90px;
+  --section-padding: 6rem 1rem;
+  --footer-padding: 2rem 1rem;
+}
+
+body {
+  padding-top: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+section, .panel, .card-section, .hero {
+  padding: var(--section-padding);
+  margin-bottom: 3rem;
+}
+
+footer {
+  margin-top: auto;
+  padding: var(--footer-padding);
+}
+
+/* --- 手機 / 平板 --- */
+@media (max-width: 768px) {
+  nav {
+    position: absolute; top: 60px; right: 0;
+    width: 220px; background: rgba(0,0,0,0.95);
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  nav.active { max-height: 500px; }
+  nav ul { flex-direction: column; width: 100%; }
+  nav ul li { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  nav ul li a { padding: 12px 16px; }
+
+  nav ul ul {
+    position: static;
+    display: none;
+    background: rgba(0,0,0,0.8);
+  }
+  nav ul li.active > ul { display: flex; }
+  .menu-toggle { display: flex; }
+
+  :root {
+    --header-height: 70px;
+    --section-padding: 3.5rem 1rem;
+    --footer-padding: 1.5rem 1rem;
+  }
+
+  body { padding-top: var(--header-height); }
+
+  .hero .content {
+    font-size:90%; width:98%; text-align:center; top:15%; padding:5px; color:white;
+    border-radius: 10px; left: auto;
+  }
+
+  h1 { font-size:1.5rem; text-align: center; margin-top: 30px; margin-bottom:30px; border-bottom: solid 2px; border-top: solid 2px; }
+  h2 { text-align: center; }
+
+  .p2{ padding:5px 20px; line-height:40px; text-align: center; font-size:larger;}
+
+  .panel .content {
+    left: 0; width: 95%; margin: 10px; padding: 2rem; border-radius: 12px;
+  }
+  .panel table {
+    width:100%; padding: 5px; border: 4px solid; border-radius: 10px;
+    margin: 10px; text-align: center; line-height: 20px;
+  }
+  .panel td { vertical-align: top; height:60px; }
+
+  .card-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: var(--section-padding);
+    min-height: auto;
+    background-attachment: scroll;
+  }
+  .card-section .card {
+    width: 100% !important;
+    max-width: 95vw;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+  .panel table {
+    width: 100%;
+    table-layout: fixed;
+    word-break: break-word;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 0.5rem auto;
+    line-height: 24px;
+  }
+  .panel td { padding: 4px 8px; }
+  .panel td h3 { font-size: 1rem; line-height: 1.4; }
+  .p2 { line-height: 28px; font-size: 0.95rem; text-align: justify; }
+
+  footer { padding: var(--footer-padding); }
+  
+}
+
+/* === 修正 hero 與 footer 間空白 === */
+
+/* 取消 hero 與 footer 間的外距 */
+.hero {
+  margin-bottom: 0 !important;
+  padding-bottom: 2rem; /* 保留適當空間 */
+  min-height: auto !important; /* 移除強制 100vh 高度 */
+}
+
+/* hero 內文字標題的外距壓縮 */
+.hero h2 {
+  margin: 0.5rem 0 !important;
+}
+
+/* footer 緊貼 hero */
+footer {
+  margin-top: 0 !important;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* 確保 footer 裡文字不被壓太緊 */
+footer h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* 手機版微調間距 */
+@media (max-width: 768px) {
+  .hero {
+    padding-bottom: 1.5rem;
+  }
+  footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* --- 動畫 --- */
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
