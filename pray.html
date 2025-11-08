@@ -1,87 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-	
-	<title>奧斯汀華人教會華語堂禱告會</title>
-	<link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-	<link rel="stylesheet" href="css/pray.css" />
- </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>奧斯汀華人教會華語堂</title>
+  <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+  <link rel="stylesheet" href="css/pray.css" />
+
+<!-- CDN 載入 繁簡自動切換 opencc-js（正式版） -->
+  <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.6/dist/browser.min.js"></script>
+
+</head>
 <body>
+  <!-- 導覽列 -->
+	<div id="content-container">
+	<!-- 主選單內容載入 -->
+	</div>
 
-<!-- Navbar -->
-<nav>
-	<div class="nav-container">
-	    <div class="logo"><a href="index.html" class="logo"><img src="imgs/new_acclogo.png" alt="Logo" /></a></div>
-		<div class="menu-toggle" id="menuToggle">
-			<span></span><span></span><span></span>
-		</div>
 
-      <!-- Hamburger (mobile only) -->
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-
-      <!-- Menu -->		
-		<ul class="menu" id="menu">
-			<li><a href="#">簡介 ▼</a>
-			<ul>
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/constitution.html">信仰與規章</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/church_history.html">教會歷史</a></li>
-				<li><a href="cmv.html">價值與異象</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.net/WeeklyDocs/MandarinCoworkers.pdf">華語部同工</a></li>
-			</ul>
-			</li>
-        <li><a href="https://docs.google.com/document/d/e/2PACX-1vQFofynJeO5q1srUn2seLbCLktSl-vCQbwJAxYUqrYu5BRMEEQZDWuMFPWqSRX-H5rI91EYZu3_RRez/pub">團契</a></li>
-		<!--<li><a href="fellowships.html">團契</a></li>-->
-		
-		<li><a href="#">禱告與靈修 ▼</a>							
-			<ul>
-				<li><a href="pray.html">禱告</a></li>
-				<li><a href="https://austinchinesechurch.github.io/acc.github.io/html/2_bible_readerplan.html">讀經生活日記</a></li>
-				<li><a href="https://austinchinesechurch.github.io/acc.github.io/html/1_spiritual_formation.html">讀經計畫與靈修材料</a></li>
-			</ul>
-		</li>
-
-		</li>
-		<li><a href="#">主日學與事工 ▼</a>
-			<ul>
-				<li><a target="_blank" href="https://austinchinesechurch.org/docs/SSchool.pdf">本季主日學時間地點</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.org/docs/currentquarter.pdf">本季主日學內容</a></li>
-				<li><a target="_blank" href="ss_history.html">主日學課程歷史</a></li>
-				<li><a target="_blank" href="https://www.acclighthouse.org/">青少年事工 YOUTH</a></li>
-				<li><a target="_blank" href="https://www.accchildren.org/">兒童事工 CHILDREN</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/3_chinese_school.html">中文學校 CHINESE SCHOOL</a></li>
-			</ul>
-		</li>
-		<li><a href="#">聯繫我們 ▼</a>
-			<ul>
-				<li><a target="_blank" href="https://acc.churchcenter.com/giving" class="button primary">網路奉獻</a></li>			
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/direction.html">地圖指引</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/first_visit.html">初次來訪</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/html/recruit.html">教牧及職員招聘</a></li>
-			</ul>
-		</li>
-		<li><a href="#">資源 ▼</a>
-			<ul>
-				<li><a target="_blank" href="https://www.youtube.com/@AustinChineseChurch/playlists">主日證道影片</a></li>
-				<li><a target="_blank" href="https://austinchinesechurch.org/WeeklyDocs/SundayBulletins.htm">教會週報</a></li>
-				<li><a target="_blank" href="yearreport.html">年度事工報告</a></li>
-				<li><a target="_blank" href="https://sites.google.com/austinchinesechurch.org/acc-education-building">建堂進度</a></li>
-			</ul>
-		</li>
-		<li><a target="_blank" href="https://austinchinesechurch.github.io/acc.github.io/" class="button primary">教會主頁</a></li>
-
-      </ul>
-    </div>
-</nav>
-
-  <!-- 空header避免被navbar遮住 -->
-	<header></header>
-<br>
-
-<section class="hero">
+ <section class="hero">
 
 	<div class="content">
 
@@ -97,7 +34,7 @@
 
 <p>其它週，除了每個團契各自有的定期禱告會外，歡迎你就近加入週三晚跨團契的分區禱告會 :</p><br>
 <div align="center">
-<table class="table1">
+<table class="table">
 	<tr>
 		<td>西北區 </td><td>7:30-9:00PM</td><td>聯絡人：林旭東長老 Morgan Lin</td>
 	</tr>
@@ -112,84 +49,94 @@
 
 <br>
 
-<h3>個人代禱需要</h3>
+<h2>個人代禱需要</h2>
 
-<p class="p2">若您有希望多人代禱的個人需要，可送電郵到 prayer@austinchinesechurch.org。但若所提代禱需要是為他人，請務必尊重當事人的意願。若只想請牧師及長老們私下代禱，請直接與他們之中的任何一位聯絡。<p>
+<p>若您有希望多人代禱的個人需要，可送電郵到 prayer@austinchinesechurch.org。但若所提代禱需要是為他人，請務必尊重當事人的意願。若只想請牧師及長老們私下代禱，請直接與他們之中的任何一位聯絡。<p>
 
  
     </div>
   </section>
-
-  <!-- Pattern Section 1 --
-  <section class="panel pattern-1">
-	
-    <div class="panel content">
-		<div align="center">
-			<h1>主日敬拜時間</h1><br>
-			<table>
-				<tr>
-					<td align="center"><h3>09:30AM</h3></td><td><h3>成人主日學<br>兒童部活動</h3></td>
-				</tr>
-				<tr>
-					<td><h3>11:10AM</h3></td><td><h3>主日崇拜</h3></td>
-				</tr>		
-				<tr>
-					<td><h3>12:15PM</h3></td><td><h3>主日午餐</h3></td>
-				</tr>
-				<tr><td colspan="2"><br><p>成人聚會時間同時有：嬰幼兒照顧，兒童主日學/兒童崇拜，和青少年聚會。</p></td></tr>
-			</table>
-
-	  </div>
-    </div>
-  </section>
-
-  <!-- Pattern Section 2 --
-  <section class="panel pattern-2">
-    <div class="content">
-      <h2>圖案背景區塊二</h2>
-      <p>這裡可以放更多內容或特色介紹。</p>
-    </div>
-  </section>
-  -->
-  <script>
-    // 手機版選單切換
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('menu');
-
-    hamburger.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
-
-    // 手機版支援多層展開
-    document.querySelectorAll('.menu li > a').forEach(link => {
-      link.addEventListener('click', e => {
-        const parentLi = e.target.parentElement;
-        if (parentLi.querySelector('ul')) {
-          e.preventDefault(); // 防止直接跳連結
-          parentLi.classList.toggle('show');
-        }
-      });
-    });
-  </script>
   <footer>
-	<h3>奧斯汀華人教會<br>Austin Chinese Church</h3>
+	<h3 style="text-align:center;" >奧斯汀華人教會<br>Austin Chinese Church</h3>
 	<p>11118 Dessau Road, Austin, TX 78754<br>Phone: 512-339-8675<br>
 	<a style="color: white; background-color: transparent; text-decoration: underline;" href="mailto:contact@austinchinesechurch.org">contact@austinchinesechurch.org</a></p>
 	<p class="copyright">© Austin Chinese Church. 2025. All rights reserved.</p>
   </footer>
+  
+  
+<!-- 獲取主選單(header.html)檔案的內容 -->
+<script>
+  // 獲取外部檔案的內容
+  fetch('header.html')
+    .then(response => {
+      // 確保回應成功
+      if (!response.ok) {
+        throw new Error('無法載入檔案');
+      }
+      // 將回應解析為純文字
+      return response.text();
+    })
+    .then(htmlText => {
+      // 找到容器元素並將獲取的 HTML 文字設定為其內容
+      document.getElementById('content-container').innerHTML = htmlText;
+    })
+    .catch(error => {
+      console.error('載入內容時出錯:', error);
+      document.getElementById('content-container').innerHTML = '<p>載入內容失敗。</p>';
+    });
+</script>
+
+
+<script>
+  // 設定 header 高度
+  function updateHeaderHeight() {
+    const header = document.querySelector('header'); // Use querySelector for header
+    if (header) {
+      document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
+    }
+  }
+  window.addEventListener('load', updateHeaderHeight);
+  window.addEventListener('resize', updateHeaderHeight);
+
+  // 漢堡選單切換
+  function toggleMenu() { // Define the function for onclick
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) {
+      navMenu.classList.toggle('active');
+    }
+  }
+
+  // 下拉選單在手機模式下的開合邏輯
+  document.querySelectorAll('nav ul li a').forEach(item => {
+    item.addEventListener('click', function(event) {
+      if (window.innerWidth <= 768) { // Only apply on mobile
+        const parentLi = this.parentElement;
+        if (parentLi.querySelector('ul')) { // If it has a submenu
+          event.preventDefault(); // Prevent default link action
+          parentLi.classList.toggle('active'); // Toggle 'active' for submenu display
+        }
+      }
+    });
+  });
+
+  // 浮動公告漸入漸出
+  const floatingBox = document.getElementById('floatingBox'); // Corrected variable name
+  if (floatingBox) { // Check if the element exists
+    setTimeout(() => { floatingBox.classList.add('show'); }, 500);
+    setTimeout(() => { floatingBox.classList.remove('show'); }, 8000); // Remove 'show' to hide it
+  }
+
+  // 卡片漸入效果 (NEW)
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card, index) => {
+    // Stagger the animation slightly for a nicer effect
+    setTimeout(() => {
+      card.classList.add('show');
+    }, 100 * (index + 1)); // 100ms delay per card
+  });
+
+</script>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
 
