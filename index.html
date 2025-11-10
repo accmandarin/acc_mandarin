@@ -88,6 +88,39 @@
 	<p class="copyright">© Austin Chinese Church. 2025. All rights reserved.</p>
   </footer>
 
+<!-- 繁體、簡體 自動轉換  -->
+<script>
+  (async function() {
+    const STORAGE_KEY = 'preferred-chinese-variant';
+    let converterTW2CN, converterCN2TW, btnTW, btnCN;
+
+    // 1️⃣ Load OpenCC converters
+    converterTW2CN = await OpenCC.Converter({ from: 'twp', to: 'cn' });
+    converterCN2TW = await OpenCC.Converter({ from: 'cn', to: 'twp' });
+
+    // 2️⃣ Conversion function
+    function traverseAndConvert(node, converter) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent = converter(node.textContent);
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        node.childNodes.forEach(child => traverseAndConvert(child, converter));
+      }
+    }
+
+    function applyVariant(variant) {
+      if (variant === 'cn') {
+        traverseAndConvert(document.body, converterTW2CN);
+        if (btnCN) btnCN.classList.add('active');
+        if (btnTW) btnTW.classList.remove('active');
+      } else {
+        traverseAndConvert(document.body, converterCN2TW);
+        if (btnTW) btnTW.classList.add('active');
+        if (btnCN) btnCN.classList.remove('active');
+      }
+      localStorage.setItem(STORAGE_KEY, variant);
+    }
+</script>
+
 <!-- 獲取主選單(header.html)檔案的內容 -->
 <script>
   // 獲取外部檔案的內容
@@ -161,50 +194,9 @@ window.addEventListener("load", () => {
 });
 </script>
 
-<!-- 繁體、簡體 自動轉換  -->
-<script>
-    (async function() {
-      const btnTW = document.getElementById('btn-tw');
-      const btnCN = document.getElementById('btn-cn');
-      const STORAGE_KEY = 'preferred-chinese-variant';
-
-      // 1️⃣ 載入 OpenCC 轉換器
-      const converterTW2CN = await OpenCC.Converter({ from: 'twp', to: 'cn' }); // 繁 → 簡
-      const converterCN2TW = await OpenCC.Converter({ from: 'cn', to: 'twp' }); // 簡 → 繁
-
-      // 2️⃣ 定義轉換函式（會遞迴轉換所有文字節點）
-      function traverseAndConvert(node, converter) {
-        if (node.nodeType === Node.TEXT_NODE) {
-          node.textContent = converter(node.textContent);
-        } else if (node.nodeType === Node.ELEMENT_NODE) {
-          node.childNodes.forEach(child => traverseAndConvert(child, converter));
-        }
-      }
-
-      async function applyVariant(variant) {
-        if (variant === 'cn') {
-          traverseAndConvert(document.body, converterTW2CN);
-          btnCN.classList.add('active');
-          btnTW.classList.remove('active');
-        } else {
-          traverseAndConvert(document.body, converterCN2TW);
-          btnTW.classList.add('active');
-          btnCN.classList.remove('active');
-        }
-        localStorage.setItem(STORAGE_KEY, variant);
-      }
-
-      // 3️⃣ 綁定事件
-      btnTW.addEventListener('click', () => applyVariant('tw'));
-      btnCN.addEventListener('click', () => applyVariant('cn'));
-
-      // 4️⃣ 載入上次設定
-      const saved = localStorage.getItem(STORAGE_KEY);
-      applyVariant(saved === 'cn' ? 'cn' : 'tw');
-    })();
-  </script>
 </body>
 </html>
+
 
 
 
