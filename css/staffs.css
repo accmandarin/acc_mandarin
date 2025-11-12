@@ -57,7 +57,7 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
     /* 手機 / 平板樣式 */
     @media (max-width: 768px) {
 	
-	.content1 { width:110%; text-align: center; margin-top:50px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px; }
+	.content1 { text-align: center; margin-top:10px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px; }
 	h1{ font-size:20px;}
       nav {
         position: absolute; top: 60px; right: 0;
@@ -108,8 +108,7 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
     .section {
       background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg') no-repeat center center/cover;
 	  /*background: url('https://picsum.photos/1920/1080?blur=3') no-repeat center center/cover;*/
-      padding: 100px 20px; display: flex; justify-content: center;
-      gap: 30px; flex-wrap: wrap;
+      padding: 100px 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
     }
     .card {
 	  text-align: center;
@@ -184,7 +183,6 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
 		/* 彈窗出現時的動畫效果 (可選) */
 		animation-name: animatetop; animation-duration: 0.4s;
 	}
-
 
 }
 
