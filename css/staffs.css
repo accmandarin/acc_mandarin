@@ -151,75 +151,60 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
 	footer p{ margin-top: 0.975em; font-size: 0.9em; line-height: 1.3; color: white; }
 
 /* --- Modal (彈出視窗) 樣式 --- */
-
+/* === Modal 背景層 === */
 .modal {
-    display: none;  /* 預設隱藏 */
-    position: fixed; 
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0,0,0,0.8);
-	justify-content: center;
-	align-items: center;
-	overflow-y: auto; /* ✅ 內容太多時可以滾動 */
-	padding: 20px; /* ✅ 保留一點安全邊界 */
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding: 4vh 2vw; /* ✅ 上下左右保留間距 */
+  box-sizing: border-box;
 }
 
-/* 彈出視窗的內容區 */
+/* === Modal 內容 === */
 .modal-content {
-	background-color: #fff;
-	margin: 5vh auto;  /* ✅ 上下留白避免頂到螢幕邊 */
-	padding: 20px;
-	border-radius: 10px;
-	max-width: 90vw;  /* ✅ 手機寬度不超過螢幕 */
-	max-height: 90vh; /* ✅ 手機高度不超過螢幕 */
-	overflow-y: auto; /* ✅ 若內容過多可滾動 */
-	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    
-	/* 彈窗出現時的動畫效果 (可選) */
-    animation-name: animatetop; animation-duration: 0.4s;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: min(90%, 600px); /* ✅ 手機寬度留邊，桌機最多600px */
+  max-height: 90vh;       /* ✅ 不超過螢幕高 */
+  overflow-y: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin: auto;           /* ✅ 讓它在 padding 範圍內置中 */
+  animation: fadeIn 0.25s ease;
 }
 
+/* 關閉按鈕 */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* 淡入動畫 */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 768px) {
-
-	.modal-content { top: 5%; padding: 15px; font-size: 0.95rem; border-radius: 8px;	}
-
+/* === 手機版微調 === */
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 15px;
+    border-radius: 10px;
+    width: 94%;       /* ✅ 左右保留3%空間 */
+    max-height: 88vh; /* ✅ 上下再多留點空間 */
+  }
 }
 
-/* 彈窗動畫 */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-}
-
-/* 關閉按鈕樣式 */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #333;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* 讓圖片可點擊區域有滑鼠游標提示 */
-.modal-trigger {
-    cursor: pointer;
-
-}
