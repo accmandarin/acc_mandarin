@@ -3,13 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>奧斯汀華人教會華語堂</title>
-  <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+  <title>奧斯汀華人教會華語堂牧者與同工</title>
   <link rel="stylesheet" href="css/staffs.css" />
-
-<!-- CDN 載入 繁簡自動切換 opencc-js（正式版） --
-  <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.6/dist/browser.min.js"></script>
--->
 
 </head>
 <body>
@@ -17,143 +12,247 @@
 	<div id="content-container">
 	<!-- 主選單內容載入 -->
 	</div>
- <main class="wrap" role="main">
-    <h1 class="label">華語部牧者</h1>
-    <section class="profiles" aria-label="人物列表">
 
-      <article class="profile" aria-labelledby="name-1">
-        <div class="left">
-          <img class="avatar" src="imgs/staffs/michaelliu.jpg" alt="劉心亮牧師">
-          <div class="contact">
-            <div id="name-1" class="name">劉心亮牧師</div>
-            <div class="info-item">週二至週五 辦公電話<br>Office Phone(TUE-FRI)</div>
-			<div class="info-item"><img src="imgs/officephone.svg" style="width:25px; height:25px" alt="Office phone">&nbsp;&nbsp;&nbsp;512-339-8675 ext. 106</div>
-            <div class="info-item email"><a href="mailto:michael.liu@austinchinesechurch.org">michael.liu@austinchinesechurch.org</a></div>
-          </div>
-        </div>
-        <div class="right">
-          <p class="bio">
-			<b>劉心亮牧師</b>生長於中國河南，年少時曾歷經輟學與礦井生活的艱辛。在人生低谷中蒙主揀選，經歷浪子回頭的恩典，在基督裡找到生命的方向與意義。信主後，
-			他重返校園，先後於江西財經大學取得經濟學學士與管理學碩士學位。畢業後在江鈴汽車財務部任職，從事會計與內部審計工作。於 2006 年回應神的呼召，
-			與妻子一同赴美，在西北浸信會神學院接受神學裝備，獲道學碩士學位。2010 年起，劉牧師在加拿大全職牧養愛城華人基督教福音堂近十三年。
-			牧會期間持續深造，於 2023 年取得富勒神學院教牧學博士學位。同年，在神的帶領下，全家遷至德州奧斯汀，加入奧斯汀華人教會，擔任華語堂牧師至今。
-			劉牧師與	妻子章蕾育有一子一女，兒子劉明德、女兒劉明玉。<br>
-			<b>Rev. Michael Liu</b> was born and raised in Henan China. During his teenage years, he dropped out of school and
-			wandered through the countryside, eventually working in a mine. During those rebellion years, however, the
-			prodigal son was saved by Christ and found his life purpose and meaning in God! Later, he returned back to
-			campus by God’s grace and was able to accomplish his bachelor’s(2001) and master’s degrees (2006) in Jiangxi
-			University of Finance & Economics. By answering God's calling in 2006, he and his wife Ruth went to the
-			United States to study for a Master of Divinity at Northwest Baptist Seminary. After graduating from seminary,
-			he moved to Canada in 2010 and served at Edmonton Chinese Christian Church for twelve and a half years.
-			During his pastoral ministry, he continued to pursue further studies and will graduate with a Doctor of Ministry
-			degree from Fuller Theological Seminary in 2023. Guided by God, in 2023, he joined Austin Chinese Church
-			to pastor the Mandarin congregation. Michael and Ruth are blessed with two children, Joseph and Jenna.  
-		  </p>
-        </div>
-      </article>
+  <!-- 第二區 (卡片) -->
+  <section class="section">
+    <div class="content1" >
+      <h1 >奧斯汀華人教會華語堂牧者</h1>
+	  <h3>按相片可看簡歷</h3>
+    </div>
+	
+	<div class="card">
+		<div class="modal-trigger" onclick="openModal('modal1')">
+			<img src="imgs/staffs/michaelliu.jpg" style="width:250px; height:250px" alt="劉心亮牧師">
+			<h3>劉心亮牧師</h3>
+			<p style="text-align:center;">週二至週五 辦公電話<br>
+			<img src="imgs/officephone.svg" style="width:25px; height:25px" alt="Office phone">&nbsp;&nbsp;&nbsp;512-339-8675 ext.106<br>
+			<a href="mailto:michael.liu@austinchinesechurch.org">michael.liu@austinchinesechurch.org</a></p>
+		</div>
+	</div>
+		
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+        <!-- 關閉按鈕 -->
+				<span class="close" onclick="closeModal('modal1')">&times;</span>
+				<!-- 彈窗內的詳細內容 -->
+				<h2>劉心亮牧師</h2>
+					<p><b>劉心亮牧師</b>生長於中國河南，年少時曾歷經輟學與礦井生活的艱辛。在人生低谷中蒙主揀選，經歷浪子回頭的恩典，在基督裡找到生命的方向與意義。信主後，
+					他重返校園，先後於江西財經大學取得經濟學學士與管理學碩士學位。畢業後在江鈴汽車財務部任職，從事會計與內部審計工作。於 2006 年回應神的呼召，
+					與妻子一同赴美，在西北浸信會神學院接受神學裝備，獲道學碩士學位。2010 年起，劉牧師在加拿大全職牧養愛城華人基督教福音堂近十三年。
+					牧會期間持續深造，於 2023 年取得富勒神學院教牧學博士學位。同年，在神的帶領下，全家遷至德州奧斯汀，加入奧斯汀華人教會，擔任華語堂牧師至今。
+					劉牧師與	妻子章蕾育有一子一女，兒子劉明德、女兒劉明玉。<br>
+					<b>Rev. Michael Liu</b> was born and raised in Henan China. During his teenage years, he dropped out of school and
+					wandered through the countryside, eventually working in a mine. During those rebellion years, however, the
+					prodigal son was saved by Christ and found his life purpose and meaning in God! Later, he returned back to
+					campus by God’s grace and was able to accomplish his bachelor’s(2001) and master’s degrees (2006) in Jiangxi
+					University of Finance & Economics. By answering God's calling in 2006, he and his wife Ruth went to the
+					United States to study for a Master of Divinity at Northwest Baptist Seminary. After graduating from seminary,
+					he moved to Canada in 2010 and served at Edmonton Chinese Christian Church for twelve and a half years.
+					During his pastoral ministry, he continued to pursue further studies and will graduate with a Doctor of Ministry
+					degree from Fuller Theological Seminary in 2023. Guided by God, in 2023, he joined Austin Chinese Church
+					to pastor the Mandarin congregation. Michael and Ruth are blessed with two children, Joseph and Jenna.  
+					</p>
+		</div>
+	</div>
 
-      <article class="profile" aria-labelledby="name-2">
-        <div class="left">
-          <img class="avatar" src="imgs/staffs/tonyhsu.jpg" alt="徐心道牧師">
-          <div class="contact">
-            <div id="name-2" class="name">徐心道牧師</div>
-            <div class="info-item">週二至週五 辦公電話<br>Office Phone(TUE-FRI)</div>
-			<div class="info-item"><img src="imgs/officephone.svg" style="width:25px; height:25px" alt="Office phone">&nbsp;&nbsp;&nbsp;512-339-8675 ext.105</div>
-            <div class="info-item email"><a href="mailto:tonyhsu@austinchinesechurch.org">tonyhsu@austinchinesechurch.org</a></div>
-          </div>
-        </div>
-        <div class="right">
-          <p class="bio">
-			<b>徐心道牧師</b> 1983 年從臺灣來 Iowa 讀企管碩士時信主，1984 年與妻子方靜琦一起受洗。1986 年兩人在北加州取得電腦碩士後，遷至洛杉磯，都在 Unisys 擔任軟體系統工程師，
-			並在剛植的聖迦谷羅省基督教會參與事奉。 1990 年底加入十七人的團隊到洛杉磯東區植堂，成立生命泉基督教會。 同時接受全職事奉呼召，1994 年富勒神學院畢業。 
-			1997 起在紐約州大學城旖色佳牧養華人教會十六年半，力求栽培學生及學者成為神國工人。 2000 年帶領教會成立英文堂後，兼任英文堂牧師八年。 
-			全職牧會期間，他兼任康乃爾大學校牧，並持續進修，2008 年三一神學院教牧學博士畢業。 2013 年用約一年時間將大學城事奉交棒后，
-			蒙神引導來到奧斯汀擔任本教會華語部牧師。 除了有兩個已成年的女兒外，還有一個小外孫及一個小外孫女。<br>
-			Rev. Tony Hsu came to US from Taiwan in 1983 for his MBA study. He and his wife Jenny soon accepted Christ and got baptized together in 1984. 
-			After getting their master degree in computer science they moved from Silicon Valley to Los Angeles in 1986 to work for Unisys as Software Engineers, 
-			and they joined a newly planted church FEC-SGV. Four years later they joined a team of 17 people to plant another church RLCC in the east side of Los Angeles County. 
-			At the same time God called them to full-time ministry, and Tony completed his M.Div. studies at Fuller Theological Seminary in 1994.
-			From 1997 to 2013 he served in Ithaca, NY, the college town of Cornell University, focusing on students and scholars ministry. After leading the church
-			to start English worship service in 2000 he served as both Chinese Pastor and English Pastor for 8 years. While pastoring the church full time, 
-			he also served as Cornell University chaplain, and he continued to equip himself by completing Doctor of Ministry study at Trinity Evangelical Divinity in 5 years 
-			(2003 to 2008). After using almost one full year to pass the college town ministry baton, God guided them to move to Austin at the end of 2013 
-			to serve as our Mandarin Pastor. In addition to two grownup daughters, Lydia and Tina, he also has one grandson and one granddaughter.
+	<div class="card">
+		<div class="modal-trigger" onclick="openModal('modal2')">
+			<img src="imgs/staffs/tonyhsu.jpg" style="width:250px; height:250px" alt="徐心道牧師">
+			<h3>徐心道牧師</h3>
+			<p style="text-align:center;">週二至週五 辦公電話<br>
+			<img src="imgs/officephone.svg" style="width:25px; height:25px" alt="Office phone">&nbsp;&nbsp;&nbsp;512-339-8675 ext.105<br>
+			<a href="mailto:tonyhsu@austinchinesechurch.org">tonyhsu@austinchinesechurch.org</a></p>
+		</div>
+	</div>
+	<div id="modal2" class="modal">
+		<div class="modal-content">
+			<!-- 關閉按鈕 -->
+			<span class="close" onclick="closeModal('modal2')">&times;</span>
+			<!-- 彈窗內的詳細內容 -->
+			<h2>徐心道牧師</h2>
+			<p><b>徐心道牧師</b> 1983 年從臺灣來 Iowa 讀企管碩士時信主，1984 年與妻子方靜琦一起受洗。1986 年兩人在北加州取得電腦碩士後，遷至洛杉磯，都在 Unisys 擔任軟體系統工程師，
+					並在剛植的聖迦谷羅省基督教會參與事奉。 1990 年底加入十七人的團隊到洛杉磯東區植堂，成立生命泉基督教會。 同時接受全職事奉呼召，1994 年富勒神學院畢業。 
+					1997 起在紐約州大學城旖色佳牧養華人教會十六年半，力求栽培學生及學者成為神國工人。 2000 年帶領教會成立英文堂後，兼任英文堂牧師八年。 全職牧會期間，他兼任康乃爾大學校牧，
+					並持續進修，2008 年三一神學院教牧學博士畢業。 2013 年用約一年時間將大學城事奉交棒后，蒙神引導來到奧斯汀擔任本教會華語部牧師。 除了有兩個已成年的女兒外，還有一個小外孫及一個小外孫女。<br>
+					Rev. Tony Hsu came to US from Taiwan in 1983 for his MBA study. He and his wife Jenny soon accepted Christ and got baptized together in 1984. 
+					After getting their master degree in computer science they moved from Silicon Valley to Los Angeles in 1986 to work for Unisys as Software Engineers, 
+					and they joined a newly planted church FEC-SGV. Four years later they joined a team of 17 people to plant another church RLCC in the east side of Los Angeles County. 
+					At the same time God called them to full-time ministry, and Tony completed his M.Div. studies at Fuller Theological Seminary in 1994. From 1997 to 2013 
+					he served in Ithaca, NY, the college town of Cornell University, focusing on students and scholars ministry. After leading the church to start English worship service 
+					in 2000 he served as both Chinese Pastor and English Pastor for 8 years. While pastoring the church full time, he also served as Cornell University chaplain, 
+					and he continued to equip himself by completing Doctor of Ministry study at Trinity Evangelical Divinity in 5 years(2003 to 2008). After using almost 
+					one full year to pass the college town ministry baton, God guided them to move to Austin at the end of 2013 to serve as our Mandarin Pastor. 
+					In addition to two grownup daughters, Lydia and Tina, he also has one grandson and one granddaughter.
+				</p>
+			</div>
+	</div>
+
+	<div class="card">
+		<div class="modal-trigger" onclick="openModal('modal3')">
+			<img src="imgs/staffs/markzhou.jpg" style="width:250px; height:250px" alt="周天祥傳道">
+			<h3>周天祥傳道</h3>
+			<p style="text-align:center;">週二至週五 辦公電話<br>
+			<img src="imgs/officephone.svg" style="width:25px; height:25px" alt="Office phone">&nbsp;&nbsp;&nbsp;512-339-8675<br>
+			<a href="mailto:markzhou@austinchinesechurch.org">markzhou@austinchinesechurch.org</a></p>
+		</div>
+	</div>
+	<div id="modal3" class="modal">
+		<div class="modal-content">
+			<!-- 關閉按鈕 -->
+			<span class="close" onclick="closeModal('modal3')">&times;</span>
+			<!-- 彈窗內的詳細內容 -->
+			<h2>周天祥傳道</h2>
+			<p><b>周天祥傳道</b> 出生於中國上海，成长于基督徒家庭。2012 年大學畢業後，順服神的呼召，前往中亞參與跨文化宣教事工。在宣教工場上親身經歷主的保守與信實，生命也因此被進一
+				步更新與建造。2015 年回到國內後，繼續在宣教事工中全職服事，參與宣教培訓、關懷以及宣教拓展工作，並在家庭教會中擔任主要同工，致力於教會牧養和門訓。2021 年，
+				周傳道與妻子張雅靜姊妹一同回應主的呼召，前往美國德州，進入西南浸信會神學院就讀，並於 2025 年 5 月畢業，獲道學碩士學位。蒙神帶領，同年 6 月來到奧斯汀華人教會任實習傳道。
+				周傳道與妻子張雅靜姊妹願在主裡同心合一，為福音與神國的拓展繼續擺上。<br>
+				Mark Zhou was born in Shanghai, China, and grew up in a Christian family. After graduating from universityin 2012, 
+				in answering God’s calling, he went to Central Asia to engage in cross-cultural missions. On the mission field, 
+				he personally experienced the Lord’s protection and faithfulness, and his life was further renewed and strengthened. 
+				After returning to China in 2015, he continued to serve full-time in missions, participating in missionary training, member care, 
+				and the expansion of mission efforts. He also served as a key co-worker in a house church, focusing on pastoral care and discipleship. 
+				In 2021, Mark and his wife, Yajing, responded to Lord’s call and moved to Texas to study at Southwestern Baptist Theological Seminary. 
+				He graduated in May 2025 with a Master of Divinity degree. By God’s guidance, he joined Austin Chinese Church as a ministry apprentice in June. 
+				Mark and Yajing and are committed to serving together in unity for the advancement of the gospel and the expansion of God’s kingdom.
 			</p>
-        </div>
-      </article>
+			</div>
+	</div>
+	
+  </section>
 
-      <article class="profile" aria-labelledby="name-3">
-         <div class="left">
-          <img class="avatar" src="imgs/staffs/markzhou.jpg" alt="周天祥傳道">
-          <div class="contact">
-            <div id="name-2" class="name">周天祥傳道</div>
-            <div class="info-item">週二至週五 辦公電話<br>Office Phone(TUE-FRI)</div>
-			<div class="info-item"><img src="imgs/officephone.svg" style="width:25px; height:25px" alt="Office phone">&nbsp;&nbsp;&nbsp;512-339-8675</div>
-            <div class="info-item email"><a href="mailto:miarkzhou@austinchinesechurch.org">markzhou@austinchinesechurch.org</a></div>
-          </div>
-        </div>
-        <div class="right">
-          <p class="bio">
-			<b>周天祥傳道</b> 出生於中國上海，成长于基督徒家庭。2012 年大學畢業後，順服神的呼召，前往中亞參與跨文化宣教事工。在宣教工場上親身經歷主的保守與信實，生命也因此被進一
-			步更新與建造。2015 年回到國內後，繼續在宣教事工中全職服事，參與宣教培訓、關懷以及宣教拓展工作，並在家庭教會中擔任主要同工，致力於教會牧養和門訓。2021 年，
-			周傳道與妻子張雅靜姊妹一同回應主的呼召，前往美國德州，進入西南浸信會神學院就讀，並於 2025 年 5 月畢業，獲道學碩士學位。蒙神帶領，同年 6 月來到奧斯汀華人教會任實習傳道。
-			周傳道與妻子張雅靜姊妹願在主裡同心合一，為福音與神國的拓展繼續擺上。<br>
-			Mark Zhou was born in Shanghai, China, and grew up in a Christian family. After graduating from universityin 2012, 
-			in answering God’s calling, he went to Central Asia to engage in cross-cultural missions. On the mission field, 
-			he personally experienced the Lord’s protection and faithfulness, and his life was further renewed and strengthened. 
-			After returning to China in 2015, he continued to serve full-time in missions, participating in missionary training, member care, 
-			and the expansion of mission efforts. He also served as a key co-worker in a house church, focusing on pastoral care and discipleship. 
-			In 2021, Mark and his wife, Yajing, responded to Lord’s call and moved to Texas to study at Southwestern Baptist Theological Seminary. 
-			He graduated in May 2025 with a Master of Divinity degree. By God’s guidance, he joined Austin Chinese Church as a ministry apprentice in June. 
-			Mark and Yajing and are committed to serving together in unity for the advancement of the gospel and the expansion of God’s kingdom.
+  <section class="section">
+    <div class="content1" >
+      <h1 >華語堂長老</h1>
+	  <h3>按相片可看簡歷</h3>
+    </div>
+	
+	<div class="card">
+		<div class="modal-trigger" onclick="openModal('modal4')">
+			<img src="imgs/staffs/philipchang.jpg" style="width:250px; height:250px" alt="張延唐長老">
+			<h3>張延唐長老</h3>
+		</div>
+	</div>
+		
+	<div id="modal4" class="modal">
+		<div class="modal-content">
+        <!-- 關閉按鈕 -->
+				<span class="close" onclick="closeModal('modal4')">&times;</span>
+				<!-- 彈窗內的詳細內容 -->
+				<h2>張延唐長老</h2>
+				<p><b>張延唐長老</b>來自臺灣， 於 IBM 公司工作多年， 提前退休後在達拉斯神學院得研習證書， 現專心服事教會及從事社區服務. 張長老及徐清姊妹於 1982 年本教會成立時即為創會家庭之一。
+				在教會中曾在財務、兒童、宣教、主席、校園團契等許多部門服事， 2007 年成為教會長老，育有兩子均已就業。<br>
+				Elder Philip Chang came from Taiwan. After worked in IBM for many years, he took early retirement and got a Certificate of Graduate Studies from 
+				Dallas Theological Seminary. He is now serving in ministries at church and services for the community. Elder Phil and wife Ruth was one of the 
+				founding families of our church in 1982. He served in many ministries, including finance, children, mission and chairman, and became an Elder in 2007. 
+				The Changs have two sons who are both working now.
+				</p>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="modal-trigger" onclick="openModal('modal5')">
+			<img src="imgs/staffs/morganlin.jpg" style="width:250px; height:250px" alt="林旭東長老">
+			<h3>林旭東長老</h3>
+		</div>
+	</div>
+	<div id="modal5" class="modal">
+		<div class="modal-content">
+			<!-- 關閉按鈕 -->
+			<span class="close" onclick="closeModal('modal5')">&times;</span>
+			<!-- 彈窗內的詳細內容 -->
+			<h2>林旭東長老</h2>
+			<p><b>林旭東長老</b>生於臺灣，1978 年1 月來到德州大學奧斯汀分校，攻讀會計碩士學位，並先後取得會計師與管理會計師執照。畢業後，曾任職於德州州政府審計處及退休金制度部門，
+			隨後在下科羅拉多河流域管理局（LCRA）任職 25 年後退休。1982 年，林長老參與本會創會事工；與李幼寧姊妹育有一子一女，皆已成年。多年來，他在教會中參與多項服事，
+			曾擔任財務、靈修、長期策劃、崇拜、社區服務、主席、副主席、華語事工及校園團契等職位。2010 年接受按立為長老，並先後服事長老職分十二年。2020 年，他獲得達拉斯神學院聖經神學碩士學位。
+			林長老與師母一同投身於婚姻家庭事工，並通過 MER 認證成為合格的帶領夫婦。如今，他們一同在小靈羊職青團契與愛家貝家庭團契中擔任輔導。<br>
+			Elder Morgan Lin grew up in Taiwan and came to the University of Texas at Austin in 1978 to pursue his Master in Professional Accounting degree. 
+			He later earned his CPA and CMA certifications. After graduation, he worked at the Texas State Auditor’s Office and the Employees Retirement System of Texas, 
+			followed by 25 years of service at the Lower Colorado River Authority (LCRA) before retiring. In 1982, Elder Lin was part of the founding team of ACC. 
+			He and his wife Sister Yuning raised a son and a daughter. Over the years, Elder Lin has served the church in various ministries, including Finance, Devotion, 
+			Long-Term Planning, Worship, Community Service, Chair, Vice Chair, Mandarin Ministry, and Campus Fellowship. He was ordained as an elder in 2010 and
+			served in that role for twelve years. In 2020, he received his Master of Biblical and Theological Studies degree from Dallas Theological Seminary.
+			Elder Lin and his wife are passionate about marriage and family ministry. They are MERcertified Leading Couples. Currently, they are serving as counselors 
+			for the Little Lamb (Young Professionals) Fellowship and the Agape Family Fellowship.
 			</p>
-        </div>
-      </article>
+		</div>
+	</div>
 
-    </section>
-  </main>
+	<div class="card">
+		<div class="modal-trigger" onclick="openModal('modal6')">
+			<img src="imgs/staffs/shintowerwang.jpg" style="width:250px; height:250px" alt="王訓濤長老 ">
+			<h3>王訓濤長老 </h3>
+		</div>
+	</div>
+	<div id="modal6" class="modal">
+		<div class="modal-content">
+			<!-- 關閉按鈕 -->
+			<span class="close" onclick="closeModal('modal6')">&times;</span>
+			<!-- 彈窗內的詳細內容 -->
+			<h2>王訓濤長老 </h2>
+			<p><b>王訓濤長老 </b>  從小跟隨父母去教會聚會， 在十四歲時蒙恩得救， 受洗成為基督徒。與嫻雅的妻子里琴在 1979 年結婚。 在 1981 年來到德州大學奧斯汀校區攻讀土木工程研究所的學位。
+			畢業后在休士頓有短暫的工作機會，並於 1987 年全家搬回奧斯丁， 也在那時開始在奧斯汀華人教會參加崇拜，並學習成長與事奉。 訓濤全家四人（ 女兒與兒子 ）有固定的教會生活。
+			在過去二十年裡， 蒙主的憐憫他有機會在不同的崗位上學習服事與成長。<br>
+			Elder Shin-Tower Wang grew up in a Christian family in Taiwan and received Jesus Christ as his personal savior when he was 14. 
+			Shin-Tower married his lovely wife – LieChing in 1979 and then came to the University of Texas at Austin for an advanced degree in civil engineering in 1981. 
+			After graduation and a brief professional career in Houston, he and his family moved back to Austin in 1987, and have joined Austin Chinese Church since then. 
+			His family (including daughter Janie and son Kevin) has attended the church meeting/service regularly. He has served at different areas in ACC for the past 20 years.
+			</p>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="modal-trigger" onclick="openModal('modal7')">
+			<img src="imgs/staffs/davidwang.jpg" style="width:250px; height:250px" alt="王厚祥長老">
+			<h3>王厚祥長老</h3>
+		</div>
+	</div>
+	<div id="modal7" class="modal">
+		<div class="modal-content">
+			<!-- 關閉按鈕 -->
+			<span class="close" onclick="closeModal('modal7')">&times;</span>
+			<!-- 彈窗內的詳細內容 -->
+			<h2>王厚祥長老</h2>
+			<p><b>王厚祥長老</b>1996 年自中國大陸來美, 在俄亥俄州邁阿密大學學習。畢業後一直在 IT 公司工作, 1998 感恩節與太太曹艷麗一起在俄亥俄州哥城華人基督教會受洗歸主。2000 年 4 月搬來奧斯汀
+			後一直在奧斯汀華人教會敬拜與事奉, 曾擔任團契主席，並先後在會員部、本地佈道、校園事工、敬拜部門擔任執事，也曾擔任華語事工總協調和教會長執會主席。 他們的兒子 Jimmy 已成家立業。<br>
+			Elder David Wang came to the US in 1996 and graduated from Miami University, Ohio. He has been working as an IT professional. 
+			David and his wife Yanli Cao were baptized in November, 1998. They moved to Austin in 2000 and have been attending ACC since then. 
+			David has served as a fellowship coordinator, and a deacon in various ministries such as Membership, Local Evangelism, Chinese College, and Worship. 
+			He also served as the Mandarin Ministry Coordinator and Church Council Chairman. Their son, Jimmy, is now a proud father and works as a medical doctor.
+			</p>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="modal-trigger" onclick="openModal('modal8')">
+			<img src="imgs/staffs/yongcai.jpg" style="width:250px; height:250px" alt="蔡勇長老 ">
+			<h3>蔡勇長老</h3>
+
+		</div>
+	</div>
+	<div id="modal8" class="modal">
+		<div class="modal-content">
+			<!-- 關閉按鈕 -->
+			<span class="close" onclick="closeModal('modal8')">&times;</span>
+			<!-- 彈窗內的詳細內容 -->
+			<h2>蔡勇長老 </h2>
+			<p><b>蔡勇長老 </b>於 1989 年來美，先後在密西根大學和奧科拉荷馬大學從事研究和攻讀學位。 目前在IT 公司工作。1991 年 7 月與太太俞虹一起受洗歸主。他們育有二女一子。
+			1998 年來奧斯汀，並加入奧斯汀華人教會。他也參與團契和主日學事奉。<br>
+			Elder Yong Cai came to the US in 1989, and conducted research and received advanced degrees in pharmaceutics and computer science. 
+			Currently, Yong Cai is working as an IT professional. Yong Cai and his wife Hong Yu were baptized in July 1991. They have two daughters and a son, Rachel, Jessi
+			and Daniel. Yong came to Austin in 1998 and attended Austin Chinese Church since then. Yong has also served in Fellowship and Sunday School.
+			</p>
+		</div>
+	</div>	
+  </section>
 
  
-  
-  <footer>
+ 
+   <footer>
 	<h3>奧斯汀華人教會<br>Austin Chinese Church</h3>
-	<p>11118 Dessau Road, Austin, TX 78754<br>Phone: 512-339-8675<br>
+	<p>11118 Dessau Road, Austin, TX 78754<br>Phone: 512-339-8675<br>Fax: 512-339-9556<br>
 	<a style="color: white; background-color: transparent; text-decoration: underline;" href="mailto:contact@austinchinesechurch.org">contact@austinchinesechurch.org</a></p>
-	<p class="copyright">© Austin Chinese Church. 2025. All rights reserved.</p>
+	<p class="copyright">© Austin Chinese Church. 2023. All rights reserved.</p>
   </footer>
-
-<script>
-  // 🔧 FIXED: Initialize language system first, then load header
-  (async function() {
-    const STORAGE_KEY = 'preferred-chinese-variant';
-    let converterTW2CN, converterCN2TW, btnTW, btnCN;
-
-    // 1️⃣ Load OpenCC converters
-    converterTW2CN = await OpenCC.Converter({ from: 'twp', to: 'cn' });
-    converterCN2TW = await OpenCC.Converter({ from: 'cn', to: 'twp' });
-
-    // 2️⃣ Conversion function
-    function traverseAndConvert(node, converter) {
-      if (node.nodeType === Node.TEXT_NODE) {
-        node.textContent = converter(node.textContent);
-      } else if (node.nodeType === Node.ELEMENT_NODE) {
-        node.childNodes.forEach(child => traverseAndConvert(child, converter));
-      }
-    }
-
-    function applyVariant(variant) {
-      if (variant === 'cn') {
-        traverseAndConvert(document.body, converterTW2CN);
-        if (btnCN) btnCN.classList.add('active');
-        if (btnTW) btnTW.classList.remove('active');
-      } else {
-        traverseAndConvert(document.body, converterCN2TW);
-        if (btnTW) btnTW.classList.add('active');
-        if (btnCN) btnCN.classList.remove('active');
-      }
-      localStorage.setItem(STORAGE_KEY, variant);
-    }  
-</script>
 
 <!-- 獲取主選單(header.html)檔案的內容 -->
 <script>
@@ -176,36 +275,8 @@
       document.getElementById('content-container').innerHTML = '<p>載入內容失敗。</p>';
     });
 </script>
-
-<!---浮動式方框---> 
-<script>
-	
-	// 浮動公告 5 秒後自動淡出
-    setTimeout(() => {
-      floatingBox.style.opacity = '0';
-      setTimeout(() => {
-        floatingBox.style.display = 'none';
-      }, 1000); // 等淡出動畫結束再隱藏
-    }, 5000);
-</script>
-
-<script>
-window.addEventListener("load", () => {
-  const box = document.querySelector(".floating-box");
-
-  // 🌟 漸入
-  setTimeout(() => {
-    box.classList.remove("hidden");
-  }, 500);
-
-  // ⏳ 幾秒後淡出
-  setTimeout(() => {
-    box.classList.add("none");
-  }, 8000);
-});
-</script>
-
-<script>
+ 
+  <script>
     function toggleMenu() {
       document.querySelector("nav").classList.toggle("active");
     }
@@ -225,46 +296,33 @@ window.addEventListener("load", () => {
     }, { threshold: 0.3 });
 
     cards.forEach(card => observer.observe(card));
-</script>
+  </script>
+  
+  <script>
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector("nav");
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
 
-  // 漢堡選單開關
-  menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-
-  // 手機版子選單開關
-  const navItems = document.querySelectorAll("nav ul li");
-
-  navItems.forEach(item => {
-    const link = item.querySelector("a");
-    const submenu = item.querySelector("ul");
-
-    if(submenu) { // 有子選單的項目
-      link.addEventListener("click", (e) => {
-        if(window.innerWidth <= 768) { // 只在手機版
-          e.preventDefault();          // 阻止跳轉
-          submenu.classList.toggle("open"); // 點一次展開，再點一次收起
+    // 點擊背景也能關閉
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(m => {
+        if (event.target === m) {
+          m.style.display = "none";
+          document.body.style.overflow = "auto";
         }
       });
     }
-  });
-});
-
-</script>
-
-
+  </script>
   
+
 </body>
 </html>
-
-
-
-
-
-
-
