@@ -155,16 +155,13 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
 .modal {
   display: none;
   position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 9999;
+  inset: 0; /* 等同 top/left/right/bottom: 0 */
   background: rgba(0, 0, 0, 0.6);
   justify-content: center;
-  align-items: center;
-  overflow-y: auto;
-  padding: 4vh 2vw; /* ✅ 上下左右保留間距 */
+  align-items: flex-start; /* ⛔ 不置中，從上開始避免被擠爆 */
+  overflow-y: auto; /* ✅ 手機可以滾動 */
+  padding: 5vh 2vw; /* ✅ 上下左右留白 */
   box-sizing: border-box;
 }
 
@@ -173,12 +170,13 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
   background: #fff;
   border-radius: 12px;
   padding: 20px;
-  width: min(90%, 600px); /* ✅ 手機寬度留邊，桌機最多600px */
-  max-height: 90vh;       /* ✅ 不超過螢幕高 */
-  overflow-y: auto;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  width: 92%;
+  max-width: 600px;
+  max-height: calc(100dvh - 10vh); /* ✅ 使用動態視窗高度 (iOS安全) */
+  overflow-y: auto; /* ✅ 超出可捲動 */
+  margin: auto;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
   position: relative;
-  margin: auto;           /* ✅ 讓它在 padding 範圍內置中 */
   animation: fadeIn 0.25s ease;
 }
 
@@ -187,24 +185,28 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #333;
   cursor: pointer;
 }
 
-/* 淡入動畫 */
+/* 動畫 */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* === 手機版微調 === */
+/* 手機微調 */
 @media (max-width: 600px) {
+  .modal {
+    padding: 6vh 3vw;
+  }
   .modal-content {
     padding: 15px;
-    border-radius: 10px;
-    width: 94%;       /* ✅ 左右保留3%空間 */
-    max-height: 88vh; /* ✅ 上下再多留點空間 */
+    width: 94%;
+    max-height: calc(100dvh - 12vh);
   }
 }
+
+
 
