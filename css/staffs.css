@@ -168,16 +168,24 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
 
 /* 彈出視窗的內容區 */
 .modal-content {
-    background-color: #fefefe;
-    padding: 30px;
-    border-radius: 10px;
+    background-color: #fefefe; padding: 30px; border-radius: 10px;
     max-width: 80%; /* 控制彈窗最大寬度 */
-    width: 90%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    position: relative;
+    width: 90%; box-shadow: 0 5px 15px rgba(0,0,0,0.5); position: relative;
     /* 彈窗出現時的動畫效果 (可選) */
-    animation-name: animatetop;
-    animation-duration: 0.4s;
+    animation-name: animatetop; animation-duration: 0.4s;
+}
+
+@media (max-width: 768px) {
+
+	.modal-content {
+		background-color: #fefefe; padding: 10px; border-radius: 10px;
+		max-width: 100%; /* 控制彈窗最大寬度 */
+		width: 99%; box-shadow: 0 5px 15px rgba(0,0,0,0.5); position: relative;
+		/* 彈窗出現時的動畫效果 (可選) */
+		animation-name: animatetop; animation-duration: 0.4s;
+	}
+
+
 }
 
 /* 彈窗動畫 */
