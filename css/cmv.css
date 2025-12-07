@@ -92,7 +92,7 @@ h3 {font-size:24px; text-align:justify; margin-top:10px;}
   gap: 20px;
   flex-wrap: wrap;
 /*  padding: 2rem;*/
-  background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg') no-repeat center center/cover;
+  background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_bk1.jpg') no-repeat center center/cover;
 }
 
 .card {
@@ -181,6 +181,7 @@ h3 {font-size:24px; text-align:justify; margin-top:10px;}
 }
 
 </style>
+
 
 
 
