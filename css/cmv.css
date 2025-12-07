@@ -71,7 +71,7 @@ nav ul li:hover > ul { display: flex; }
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_bk1.jpg') no-repeat center center/cover;
+  background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg') no-repeat center center/cover;
   position: relative;
 }
 .hero .content {
@@ -92,11 +92,11 @@ h3 {font-size:24px; text-align:justify; margin-top:10px;}
   gap: 20px;
   flex-wrap: wrap;
 /*  padding: 2rem;*/
-  background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_bk1.jpg') no-repeat center center/cover;
+  background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg') no-repeat center center/cover;
 }
 
 .card {
-  	background: rgba(0,0,0,0.8); color: white; padding: 1rem;
+  	background: rgba(0,0,0,0.5); color: white; padding: 1rem;
   	border-radius: 15px; 
  /* width: 300px;  <-- REMOVED THIS LINE */
   	max-width: 80%; /* Allows it to grow, but not too wide */
@@ -181,6 +181,7 @@ h3 {font-size:24px; text-align:justify; margin-top:10px;}
 }
 
 </style>
+
 
 
 
