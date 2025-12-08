@@ -52,7 +52,7 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
     }
 
 	.content { text-align: center; margin-top:10px; padding:10px; color:white; background: rgba(0, 0, 0, 0.5); border-radius: 15px;	}
-	.content1 { width:80%; text-align: center; margin-top:20px; padding:10px; color:white; background: rgba(0, 0, 0, 0.5); border-radius: 15px; }
+	.content1 { width:80%; text-align: center; margin-top:0px; padding:10px; color:white; background: rgba(0, 0, 0, 0.5); border-radius: 15px; }
 
     /* 手機 / 平板樣式 */
     @media (max-width: 768px) {
@@ -60,7 +60,7 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
 	.img { width: 100%; height: auto; }
 	
 	.content1 { text-align: center; margin-top:10px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px; }
-	.content { text-align: center; margin-top:10px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px;	}
+	.content { width:95%; text-align: center; margin-top:10px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px;	}
 	h1{ font-size:20px;}
       nav {
         position: absolute; top: 60px; right: 0;
@@ -88,7 +88,7 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
 
       .menu-toggle { display: flex; }
 	  
-	  .content {font-size:80%; width:95%; }
+/*	  .content {font-size:80%; width:95%; }*/
     }
 	
 
@@ -209,5 +209,4 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
     max-height: calc(100dvh - 12vh);
   }
 }
-
 
