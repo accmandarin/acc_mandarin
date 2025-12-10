@@ -52,14 +52,14 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
     }
 
 	.content { text-align: center; margin-top:10px; padding:10px; color:white; background: rgba(0, 0, 0, 0.5); border-radius: 15px;	}
-	.content1 { width:80%; text-align: center; margin-top:0px; padding:10px; color:white; background: rgba(0, 0, 0, 0.5); border-radius: 15px; }
+	.content1 { width:80%; text-align: center; margin-top:0px; padding:10px; color:white; background: rgba(0, 0, 0, 0.5); border-radius: 5px; }
 
     /* 手機 / 平板樣式 */
     @media (max-width: 768px) {
 	
 	.img { width: 100%; height: auto; }
 	
-	.content1 { text-align: center; margin-top:10px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px; }
+	.content1 { text-align: center; margin-top:10px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 5px; }
 	.content { width:95%; text-align: center; margin-top:10px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px;	}
 	h1{ font-size:20px;}
       nav {
@@ -110,14 +110,16 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
     /* --- Section 2 (卡片區) --- */
     .section {
       background: url('https://accmandarin.github.io/acc_mandarin/imgs/acc_building.jpg') no-repeat center center/cover;
-      padding: 100px 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+      padding: 50px 20px; display: flex; justify-content: center;  gap: 20px; flex-wrap: wrap;
     }
+
     .card {
 	  text-align: center;
       background: #fff; width: 350px; padding: 20px;
       border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.8);
       opacity: 0; transform: translateY(50px);
 	  text-decoration: none;
+	  justify-content: left;
     }
     .card.show {
       animation: slideUp 1s forwards;
