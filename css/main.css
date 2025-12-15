@@ -18,7 +18,7 @@ header .logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
 
 nav ul { list-style: none; display: flex; }
 nav ul li { position: relative; }
-nav ul li a { display: block; padding: 10px 20px; color: #fff; text-decoration: none;}
+nav ul li a { display: block; padding: 10px 12px; color: #fff; text-decoration: none;}
 nav ul li a:hover { background: rgba(25,55,155,0); color:#ffd745; }
 
 /* 下拉選單 (桌機版 hover) */
@@ -182,6 +182,7 @@ footer p { margin-top: 0.975em; font-size: 0.9em; color: white; text-align:cente
   border-radius: 5px; padding: 4px 8px; cursor: pointer; transition: 0.3s; }
 .lang-toggle button.active { background: #ffd745; color: #000; font-weight: bold; }
 .lang-toggle button:hover { background: rgba(255,255,255,0.2); }
+
 
 
 
