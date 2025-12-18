@@ -44,11 +44,11 @@
 		  包括婦女天地, 數個家庭團契、校園學生團契、UT 宿舍區團契、在職青年團契等等。<br><br>
 
 
-	<!--特別聚會方框--
+	<!--特別聚會方框-->
 		<div class="floating-box hidden"  id="floatingBox">
-		  	<a style="text-decoration: none; font-color: white;" target="_blank" href="imgs/2025fall.jpg" alt="2025 秋季佈道會 ">
-			<img src="imgs/2025fall_small.jpg" style="width:70%; height: auto; margin:auto; display:block;" alt="2025 秋季佈道會 "></a> <br>
-			<a class="clink_w" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeYYoKD8HfEwfFw6oOm7LXkHTXTKyQ6sHy1LlOH7fveflv1cQ/viewform">
+		  	<a style="text-decoration: none; font-color: white;" target="_blank" href="imgs/2025christmas.jpg" alt="2025 聖誕節聯合崇拜 ">
+			<img src="imgs/2025christmas.jpg" style="width:100%; height: auto; margin:auto; display:block;" alt="2025 聖誕節聯合崇拜 "></a> <br>
+<!--			<a class="clink_w" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeYYoKD8HfEwfFw6oOm7LXkHTXTKyQ6sHy1LlOH7fveflv1cQ/viewform">
 			<p  style="text-decoration: none; font-size: 11pt; text-align: center; font-weight:800; ">2025秋季佈道會-科學、信仰與人生 </p>
 			<p style="text-decoration: none; font-size: 9pt;">講員：黃力夫，退休教授，曾在匹茲堡大學與北卡大學藥學院執教，專攻非病毒性的基因及藥物標靶向治療。在非病毒基因治療領域有開創性的研究，
 			發表許多論文和專利，獲得各種獎項。 <b>請按圖片看聚會時間；按標題報名，免費晚餐提供及兒童看顧登記</b></p>
@@ -175,7 +175,7 @@
     cards.forEach(card => observer.observe(card));
   </script>
 
-<!---浮動式方框---> 
+<!---浮動式方框---
 
 <script>
 	
@@ -184,10 +184,10 @@
       floatingBox.style.opacity = '0';
       setTimeout(() => {
         floatingBox.style.display = 'none';
-      }, 20000); // 等淡出動畫結束再隱藏
-    }, 20000);
+      }, 30000); // 等淡出動畫結束再隱藏
+    }, 30000);
 </script>
-
+-->
 <script>
 window.addEventListener("load", () => {
   const box = document.querySelector(".floating-box");
@@ -195,18 +195,17 @@ window.addEventListener("load", () => {
   // 🌟 漸入
   setTimeout(() => {
     box.classList.remove("hidden");
-  }, 500);
+  }, 700);
 
   // ⏳ 幾秒後淡出
   setTimeout(() => {
     box.classList.add("none");
-  }, 20000);
+  }, 30000);
 });
 </script>
 
 </body>
 </html>
-
 
 
 
