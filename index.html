@@ -175,7 +175,7 @@
     cards.forEach(card => observer.observe(card));
   </script>
 
-<!---浮動式方框---
+<!---浮動式方框--->
 
 <script>
 	
@@ -184,10 +184,10 @@
       floatingBox.style.opacity = '0';
       setTimeout(() => {
         floatingBox.style.display = 'none';
-      }, 30000); // 等淡出動畫結束再隱藏
-    }, 30000);
+      }, 10000); // 等淡出動畫結束再隱藏
+    }, 10000);
 </script>
--->
+
 <script>
 window.addEventListener("load", () => {
   const box = document.querySelector(".floating-box");
@@ -195,12 +195,12 @@ window.addEventListener("load", () => {
   // 🌟 漸入
   setTimeout(() => {
     box.classList.remove("hidden");
-  }, 700);
+  }, 500);
 
   // ⏳ 幾秒後淡出
   setTimeout(() => {
     box.classList.add("none");
-  }, 30000);
+  }, 5000);
 });
 </script>
 
