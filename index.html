@@ -180,14 +180,13 @@
 <!---浮動式方框--->
 
 <script>
-	
-	// 浮動公告 20 秒後自動淡出
+	// 浮動公告 一分鐘後自動淡出
     setTimeout(() => {
       floatingBox.style.opacity = '0';
       setTimeout(() => {
         floatingBox.style.display = 'none';
-      }, 15000); // 等淡出動畫結束再隱藏
-    }, 15000);
+      }, 1000); // 等淡出動畫結束再隱藏
+    }, 60000);
 </script>
 
 <script>
@@ -208,6 +207,7 @@ window.addEventListener("load", () => {
 
 </body>
 </html>
+
 
 
 
