@@ -56,13 +56,15 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
     @media (max-width: 768px) {
 	
 	.content1 { width:110%; text-align: center; margin-top:50px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px; }
-	h1{ font-size:20px;}
-      nav {
+	h1{ font-size:24px;}
+    h2{ font-size:18px;}
+	nav {
         position: absolute; top: 60px; right: 0;
         width: 220px; background: rgba(0,0,0,0.95);
         max-height: 0; overflow: hidden;
         transition: max-height 0.3s ease-out;
       }
+	 
       nav.active { max-height: 500px; } /* 展開效果 */
 
       nav ul {
