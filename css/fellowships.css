@@ -55,9 +55,9 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
     /* 手機 / 平板樣式 */
     @media (max-width: 768px) {
 	
-	.content1 { width:110%; text-align: center; margin-top:50px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px; }
-	h1{ font-size:24px;}
-    h2{ font-size:18px;}
+	.content1 { width:110%; text-align: center; margin-top:15px; padding:5px; color:white; background: rgba(27, 20, 125, 0.7); border-radius: 15px; }
+	h1{ font-size:20px;}
+    h2{ font-size:16px;}
 	nav {
         position: absolute; top: 60px; right: 0;
         width: 220px; background: rgba(0,0,0,0.95);
@@ -234,3 +234,4 @@ body { font-family: Arial, sans-serif; line-height: 1.6; }
     max-height: calc(100dvh - 12vh);
   }
 }
+
