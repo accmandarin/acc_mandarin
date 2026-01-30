@@ -46,15 +46,15 @@
 		  校園學生團契、UT 宿舍區團契、在職青年團契等等。<br><br>
 
 
-		<!--特別聚會 or Onlin3 service方框-->
-<!--
+		<!--特別聚會方框-->
+
 		<div class="floating-box hidden"  id="floatingBox">
-			<a style="text-decoration: none; font-color: white;" target="_blank" href="https://www.youtube.com/watch?v=J00V34c97RU">
-			<img src="imgs/acc_bk1.jpg" style="width:80%; height: auto; margin:auto; display:block;" alt="1/25/2026 主日崇拜"></a>
-			<p  style="text-decoration: none; font-size: 16pt; text-align: center; font-weight:800; ">1/25/2026 11:10 AM 線上主日崇拜<br>
-			<b>因暴風雪影響，崇拜改成線上崇拜！<br>請在 11:10am 點擊圖像，與我們一起線上崇拜！</p><br>
+		<!--	<a style="text-decoration: none; font-color: white;" target="_blank" href="https://www.youtube.com/watch?v=J00V34c97RU">-->
+			<img src="imgs/program/2026newyear.png" style="width:70%; height: auto; margin:auto; display:block;" alt="2/21/2026 春晚聯歡會"><!--</a>-->
+			<p  style="text-decoration: none; font-size: 16pt; text-align: center; font-weight:800; ">2/21/2026 春晚聯歡會，歡迎參加！<br>
+			
 		</div>		
--->		
+<!--		
 		<div class="floating-box hidden"  id="floatingBox">
 			<a style="text-decoration: none; font-color: white;" target="_blank" href="https://accmissions.wixsite.com/mc2026/zh">
 			<img src="imgs/program/2026mc.jpg" style="width:100%; height: auto; margin:auto; display:block;" alt="普世宣教在我門前"></a>
@@ -63,7 +63,7 @@
 			<p style="text-decoration: none; font-size: 12pt; text-align:center;">
 			<a style="text-shadow: 1px 1px 3px red;" target="_blank" href="https://acc.church/mc2026rsvp">大會提供免費晚餐及兒童看顧，請按這裡登記晚餐及兒童節目</a>。</p>
 		</div>
-
+-->
     </div>
 	
   </section>
@@ -90,8 +90,8 @@
 
 	<div class="card">
 	  <h1>華語主日崇拜直播</h1><br>
-	  <!--<a  style="text-decoration:none; color:white;" href="https://www.youtube.com/watch?v=J00V34c97RU" target="_blank">-->
-	    <a  style="text-decoration:none; color:white;" href="https://www.youtube.com/austinchinesechurch/live" target="_blank">
+	<!--  <a  style="text-decoration:none; color:white;" href="https://www.youtube.com/watch?v=J00V34c97RU" target="_blank">-->
+	  <a  style="text-decoration:none; color:white;" href="https://www.youtube.com/austinchinesechurch/live" target="_blank">
     	<img src="imgs/tv.png">	
 	  <h3 style="color:white;">11:10 AM - 12:25 PM<br>點擊觀看</a></h3>
 	  <br>
@@ -198,6 +198,14 @@
         floatingBox.style.display = 'none';
       }, 10000); // 等淡出動畫結束再隱藏
     }, 60000);
+	
+		// 浮動公告 一分鐘後自動淡出
+    setTimeout(() => {
+      floatingBox1.style.opacity = '0';
+      setTimeout(() => {
+        floatingBox1.style.display = 'none';
+      }, 10000); // 等淡出動畫結束再隱藏
+    }, 60000);
 </script>
 
 <script>
@@ -212,17 +220,13 @@ window.addEventListener("load", () => {
   // ⏳ 幾秒後淡出
   setTimeout(() => {
     box.classList.add("none");
-  }, 5000);
+  }, 5000000);
 });
+
 </script>
 
 </body>
 </html>
-
-
-
-
-
 
 
 
