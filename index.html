@@ -165,7 +165,7 @@
     });
 </script>
 	
-  <script>
+<script>
     function toggleMenu() {
       document.querySelector("nav").classList.toggle("active");
     }
@@ -188,65 +188,30 @@
   </script>
 
 <!---浮動式方框--->
-
 <script>
-	
 	// 浮動公告 一分鐘後自動淡出
     setTimeout(() => {
       floatingBox.style.opacity = '0';
       setTimeout(() => {
         floatingBox.style.display = 'none';
-      }, 10000); // 等淡出動畫結束再隱藏
-    }, 60000);
+      }, 20000); // 等淡出動畫結束再隱藏
+    }, 20000);
 	
-		// 浮動公告 一分鐘後自動淡出
-    setTimeout(() => {
-      floatingBox1.style.opacity = '0';
-      setTimeout(() => {
-        floatingBox1.style.display = 'none';
-      }, 10000); // 等淡出動畫結束再隱藏
-    }, 60000);
-</script>
-
-<script>
 window.addEventListener("load", () => {
   const box = document.querySelector(".floating-box");
 
   // 🌟 漸入
   setTimeout(() => {
     box.classList.remove("hidden");
-  }, 5000);
+  }, 1000);
 
   // ⏳ 幾秒後淡出
   setTimeout(() => {
     box.classList.add("none");
-  }, 5000000);
+  }, 1000);
 });
 
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
