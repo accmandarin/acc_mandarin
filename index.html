@@ -194,8 +194,8 @@
       floatingBox.style.opacity = '0';
       setTimeout(() => {
         floatingBox.style.display = 'none';
-      }, 30000); // 等淡出動畫結束再隱藏
-    }, 30000);
+      }, 20000); // 等淡出動畫結束再隱藏
+    }, 20000);
 	
 window.addEventListener("load", () => {
   const box = document.querySelector(".floating-box");
@@ -203,18 +203,19 @@ window.addEventListener("load", () => {
   // 🌟 漸入
   setTimeout(() => {
     box.classList.remove("hidden");
-  }, 1000);
+  }, 500);
 
   // ⏳ 幾秒後淡出
   setTimeout(() => {
     box.classList.add("none");
-  }, 1000);
+  }, 500);
 });
 
 </script>
 
 </body>
 </html>
+
 
 
 
