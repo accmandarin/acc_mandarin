@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPWD019MEY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BPWD019MEY');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>奧斯汀華人教會主日講道</title>
+  <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+  <link rel="stylesheet" href="css/worship.css" />
+
+</head>
+<body>
+<!-- 主選單內容載入 -->
+<div id="content-container">
+	<!-- 主選單內容載入 -->
+</div>
+
+<section class="section">
+    <div class="content1" >
+		<h1 >2026 教會總主題<br><b>Building Missional Community 建造使命群體</b></h1><br>
+		<h2>鑰節: 路4:18-19「主的靈在我身上，因為他用膏膏我，叫我傳福音給貧窮的人，差遣我報告被擄的得釋放、瞎眼的得看見，叫那受壓制的得自由，報告神悅納人的禧年。」</h2>
+    </div>
+
+<div class="card">
+	<table style="width:100%; padding:4px; border: 0px solid;">
+		<tr>
+			<b><td>日期</td><td>講道題目</td><td>講員</td><td>講道連結</td><td>崇拜全程錄影</td></b>
+		</tr>	
+		<tr>
+
+			<td>4/12/2026</td><td>林前 13: 4; 8 不變的旋律</td><td>石懷東牧師</td><td><a target="_blank" href=" ">講道連結</a></td><td><a target="_blank" href="https://www.youtube.com/playlist?list=PLKP5hqD6bi3po2IiJAjM1Bfjl0Z5GX82g">崇拜全程錄影</a></td>
+		</tr>
+		<tr>
+			<td>4/05/2026</td><td>以西結 37:1–14 復活的聖言</td><td>劉心亮牧師</td><td><a target="_blank" href="https://youtu.be/OQKHPD9gn28?si=OA9ns0GwR11BW7ZJ">講道連結</a></td><td><a target="_blank" href="https://www.youtube.com/playlist?list=PLKP5hqD6bi3rImvEjZRKX4AYkR46JGZVc">崇拜全程錄影</a></td>
+		</tr>	
+		</table>
+
+	</div>
+
+
+</section>
+
+  <footer>
+	<h3 style="padding-bottom:0px;">奧斯汀華人教會<br>Austin Chinese Church</h3>
+	<p>11118 Dessau Road, Austin, TX 78754<br>Phone: 512-339-8675<br>
+	For Donation Checks, please send to secure P.O Box<br>
+	Austin Chinese Church, P.O.Box 200055, Austin, Texas, 78720<br>
+	<a style="color: white; background-color: transparent; text-decoration: underline;" href="mailto:contact@austinchinesechurch.org">contact@austinchinesechurch.org</a></p>
+	<p class="copyright">© Austin Chinese Church. 2025. All rights reserved.</p>
+  </footer>
+  
+  
+<!-- 獲取主選單(header.html)檔案的內容 -->
+<script>
+  // 獲取外部檔案的內容
+  fetch('header.html')
+    .then(response => {
+      // 確保回應成功
+      if (!response.ok) {
+        throw new Error('無法載入檔案');
+      }
+      // 將回應解析為純文字
+      return response.text();
+    })
+    .then(htmlText => {
+      // 找到容器元素並將獲取的 HTML 文字設定為其內容
+      document.getElementById('content-container').innerHTML = htmlText;
+    })
+    .catch(error => {
+      console.error('載入內容時出錯:', error);
+      document.getElementById('content-container').innerHTML = '<p>載入內容失敗。</p>';
+    });
+</script>
+
+
+<script>
+  // 設定 header 高度
+  function updateHeaderHeight() {
+    const header = document.querySelector('header'); // Use querySelector for header
+    if (header) {
+      document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
+    }
+  }
+  window.addEventListener('load', updateHeaderHeight);
+  window.addEventListener('resize', updateHeaderHeight);
+
+  // 漢堡選單切換
+  function toggleMenu() { // Define the function for onclick
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) {
+      navMenu.classList.toggle('active');
+    }
+  }
+
+  // 下拉選單在手機模式下的開合邏輯
+  document.querySelectorAll('nav ul li a').forEach(item => {
+    item.addEventListener('click', function(event) {
+      if (window.innerWidth <= 768) { // Only apply on mobile
+        const parentLi = this.parentElement;
+        if (parentLi.querySelector('ul')) { // If it has a submenu
+          event.preventDefault(); // Prevent default link action
+          parentLi.classList.toggle('active'); // Toggle 'active' for submenu display
+        }
+      }
+    });
+  });
+
+  // 浮動公告漸入漸出
+  const floatingBox = document.getElementById('floatingBox'); // Corrected variable name
+  if (floatingBox) { // Check if the element exists
+    setTimeout(() => { floatingBox.classList.add('show'); }, 500);
+    setTimeout(() => { floatingBox.classList.remove('show'); }, 8000); // Remove 'show' to hide it
+  }
+
+  // 卡片漸入效果 (NEW)
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card, index) => {
+    // Stagger the animation slightly for a nicer effect
+    setTimeout(() => {
+      card.classList.add('show');
+    }, 100 * (index + 1)); // 100ms delay per card
+  });
+
+</script>
+
+</body>
+</html>
