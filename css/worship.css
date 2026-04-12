@@ -89,7 +89,7 @@
 		}
 
 		.menu-toggle { display: flex; }
-		div.card { overflow-x: auto;}
+		div.card { overflow-x: auto; width:99%;}
 		td {vertical-align: top; text-align: left;}
 /*	  .content {font-size:80%; width:95%; }*/
     
