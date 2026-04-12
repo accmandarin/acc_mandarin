@@ -90,7 +90,7 @@
 
 		.menu-toggle { display: flex; }
 		div.card { overflow-x: auto;}
-		td {vertical-align: top; text-align: justify;}
+		td {vertical-align: top; text-align: left;}
 /*	  .content {font-size:80%; width:95%; }*/
     
 	}
