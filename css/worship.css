@@ -12,6 +12,7 @@
 
 	table a:hover { background-color: #0056b3;}
 	
+	mark { background-color: yellow; color: black; }
 
     /* --- 導覽列 --- */
     header {
